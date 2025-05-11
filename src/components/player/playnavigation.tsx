@@ -42,26 +42,26 @@ import { useEffect, useState } from "react";
 
 const PlayNavigation = () => {
   const [playing, setPlaying] = useState(false);
-  const { setState, duration, fps, scale, playerRef, activeIds } = useStore();
-
+ // const { setState, duration, fps, scale, playerRef, activeIds } = useStore();
+ const { setState, duration, playerRef } = useStore();
   // const theState = useStore.getState();
 
  // useUpdateAnsestors({ playing, playerRef });
 
   const currentFrame = useCurrentPlayerFrame(playerRef!);
 
-  const doActiveDelete = () => {
-    dispatch(LAYER_DELETE);
-  };
+  // const doActiveDelete = () => {
+  //   dispatch(LAYER_DELETE);
+  // };
 
-  const doActiveSplit = () => {
-    dispatch(ACTIVE_SPLIT, {
-      payload: {},
-      options: {
-        time: getCurrentTime(),
-      },
-    });
-  };
+  // const doActiveSplit = () => {
+  //   dispatch(ACTIVE_SPLIT, {
+  //     payload: {},
+  //     options: {
+  //       time: getCurrentTime(),
+  //     },
+  //   });
+  // };
 
 //   const changeScale = (scale: ITimelineScaleState) => {
 //     dispatch(TIMELINE_SCALE_CHANGED, {
@@ -82,20 +82,20 @@ const PlayNavigation = () => {
    // setPlaying(false);
   };
 
-  const maximise = () => {
-    playerRef?.current?.requestFullscreen();
-    setState({ playerControls: true })
+  // const maximise = () => {
+  //   playerRef?.current?.requestFullscreen();
+  //   setState({ playerControls: true })
     
-  }
+  // }
 
-  const returnToStart = () => {
+  // const returnToStart = () => {
    
-   playerRef?.current?.seekTo(0);
-  }
+  //  playerRef?.current?.seekTo(0);
+  // }
 
-  const moveToEnd = () => {
-  playerRef?.current?.seekTo(duration);
-  }
+  // const moveToEnd = () => {
+  // playerRef?.current?.seekTo(duration);
+  // }
 
   const moveBack15Sec = () => {
     playerRef?.current?.seekTo(currentFrame - 150);
@@ -139,7 +139,7 @@ const PlayNavigation = () => {
 
 
          <span onClick={moveBack15Sec} className={"cursor-pointer"}>
-          <img src={ForwardIcon} alt="" />
+          <img src={BackwardIcon} alt="" />
          {/* <BackwardIcon /> */}
          </span>
          <span

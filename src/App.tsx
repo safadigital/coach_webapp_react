@@ -5,7 +5,7 @@ import {
   ADD_VIDEO,
   dispatch
 } from "@designcombo/events";
-import { Button } from "./components/ui/button";
+// import { Button } from "./components/ui/button";
 import { useEffect, useRef } from "react";
 import Timeline from "./components/timeline";
 import { generateId } from "@designcombo/timeline";
@@ -20,9 +20,10 @@ const App = () => {
   useTimelineEvents();
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const handleClick = () => {
-    fileInputRef.current?.click();
-  };
+  // const handleClick = () => {
+  //   fileInputRef.current?.click();
+  // };
+
   const handleFileUpload = async (files: File[]) => {
     const resourceId = "VMJQit9N0hJaCAss";
 
@@ -44,70 +45,70 @@ const App = () => {
     });
   };
 
-  const handleFileChange = (newFiles: File[]) => {
-    handleFileUpload(newFiles);
-  };
+  // const handleFileChange = (newFiles: File[]) => {
+  //   handleFileUpload(newFiles);
+  // };
 
-  const handleAddImage = () => {
-    dispatch(ADD_IMAGE, {
-      payload: {
-        id: generateId(),
-        details: {
-          src: "https://designcombo.imgix.net/images/sample-image.jpg"
-        }
-      }
-    });
-  };
+  // const handleAddImage = () => {
+  //   dispatch(ADD_IMAGE, {
+  //     payload: {
+  //       id: generateId(),
+  //       details: {
+  //         src: "https://designcombo.imgix.net/images/sample-image.jpg"
+  //       }
+  //     }
+  //   });
+  // };
 
-  const handleAddVideo = () => {
-    const resourceId = "VMJQit9N0hJaCAss";
-    dispatch(ADD_VIDEO, {
-      payload: {
-        id: generateId(),
-        details: {
-          src: "https://res.cloudinary.com/the-coach/video/upload/v1681652731/BREATHING_PRACTICE_hpdspx.mp4",
-          volume: 50
-        },
-        metadata: {
-          resourceId
-        }
-      }
-    });
-  };
+  // const handleAddVideo = () => {
+  //   const resourceId = "VMJQit9N0hJaCAss";
+  //   dispatch(ADD_VIDEO, {
+  //     payload: {
+  //       id: generateId(),
+  //       details: {
+  //         src: "https://res.cloudinary.com/the-coach/video/upload/v1681652731/BREATHING_PRACTICE_hpdspx.mp4",
+  //         volume: 50
+  //       },
+  //       metadata: {
+  //         resourceId
+  //       }
+  //     }
+  //   });
+  // };
 
-  const handleAddAudio = () => {
-    dispatch(ADD_AUDIO, {
-      payload: {
-        id: generateId(),
-        details: {
-          src: "https://designcombo.imgix.net/audios/stop-in-the-name-of-love.mp3",
-          volume: 50
-        }
-      }
-    });
-  };
+  // const handleAddAudio = () => {
+  //   dispatch(ADD_AUDIO, {
+  //     payload: {
+  //       id: generateId(),
+  //       details: {
+  //         src: "https://designcombo.imgix.net/audios/stop-in-the-name-of-love.mp3",
+  //         volume: 50
+  //       }
+  //     }
+  //   });
+  // };
 
-  const handleAddText = () => {
-    dispatch(ADD_TEXT, {
-      payload: {
-        id: generateId(),
-        details: {
-          text: "Remotion",
-          fontSize: 142,
-          fontFamily: DEFAULT_FONT.postScriptName,
-          fontUrl: DEFAULT_FONT.url,
-          width: 400,
-          textAlign: "left",
-          color: "#ffffff",
-          left: 80
-        }
-      }
-    });
-  };
+  // const handleAddText = () => {
+  //   dispatch(ADD_TEXT, {
+  //     payload: {
+  //       id: generateId(),
+  //       details: {
+  //         text: "Remotion",
+  //         fontSize: 142,
+  //         fontFamily: DEFAULT_FONT.postScriptName,
+  //         fontUrl: DEFAULT_FONT.url,
+  //         width: 400,
+  //         textAlign: "left",
+  //         color: "#ffffff",
+  //         left: 80
+  //       }
+  //     }
+  //   });
+  // };
 
-  const openLink = (url: string) => {
-    window.open(url, "_blank"); // '_blank' will open the link in a new tab
-  };
+  // const openLink = (url: string) => {
+  //   window.open(url, "_blank"); // '_blank' will open the link in a new tab
+  // };
 
 // handleAddVideo();
 
@@ -133,7 +134,7 @@ const App = () => {
   }, [])
 
   return (
-    <div className=" flex flex-col h-screen">
+    <div className="flex flex-col h-screen">
 
       {/* <div className="absolute top-4 right-4  gap-4 items-center flex text-zinc-400 italic">
         Join our discord
@@ -158,7 +159,7 @@ const App = () => {
       </div> */}
 
       <div className="">
-        <div className="visible sm:invisible w-[100vw] h-[100vh] bg-transparent">
+        <div className="w-[100vw] h-[100vh] bg-transparent">
           <Player />
         </div>
 
