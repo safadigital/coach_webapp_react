@@ -1,49 +1,49 @@
 import {
-  ADD_AUDIO,
-  ADD_IMAGE,
-  ADD_TEXT,
+  // ADD_AUDIO,
+  // ADD_IMAGE,
+  // ADD_TEXT,
   ADD_VIDEO,
   dispatch
 } from "@designcombo/events";
 // import { Button } from "./components/ui/button";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import Timeline from "./components/timeline";
 import { generateId } from "@designcombo/timeline";
-import { DEFAULT_FONT } from "./constants/font";
+// import { DEFAULT_FONT } from "./constants/font";
 import { Player } from "./components/player";
 import useStore from "./store/store";
 import useTimelineEvents from "./hooks/use-timeline-events";
 import PlayNavigation from "./components/player/playnavigation";
 
 const App = () => {
-  const { playerRef } = useStore();
+  const { playerRef, fps } = useStore();
   useTimelineEvents();
-  const fileInputRef = useRef<HTMLInputElement>(null);
+ // const fileInputRef = useRef<HTMLInputElement>(null);
 
   // const handleClick = () => {
   //   fileInputRef.current?.click();
   // };
 
-  const handleFileUpload = async (files: File[]) => {
-    const resourceId = "VMJQit9N0hJaCAss";
+  // const handleFileUpload = async (files: File[]) => {
+  //   const resourceId = "VMJQit9N0hJaCAss";
 
-    dispatch(ADD_VIDEO, {
-      payload: {
-        id: resourceId,
-        display: {
-          from: 2000,
-          to: 7000
-        },
-        details: {
-          src: URL.createObjectURL(files[0]),
-          name: files[0].name
-        },
-        metadata: {
-          resourceId
-        }
-      }
-    });
-  };
+  //   dispatch(ADD_VIDEO, {
+  //     payload: {
+  //       id: resourceId,
+  //       display: {
+  //         from: 2000,
+  //         to: 7000
+  //       },
+  //       details: {
+  //         src: URL.createObjectURL(files[0]),
+  //         name: files[0].name
+  //       },
+  //       metadata: {
+  //         resourceId
+  //       }
+  //     }
+  //   });
+  // };
 
   // const handleFileChange = (newFiles: File[]) => {
   //   handleFileUpload(newFiles);
@@ -67,7 +67,7 @@ const App = () => {
   //       id: generateId(),
   //       details: {
   //         src: "https://res.cloudinary.com/the-coach/video/upload/v1681652731/BREATHING_PRACTICE_hpdspx.mp4",
-  //         volume: 50
+  //         volume: 100
   //       },
   //       metadata: {
   //         resourceId
@@ -114,7 +114,7 @@ const App = () => {
 
   useEffect(() => {
 
- const handleAddVideo = () => {
+  function handleAddVideo() {
     const resourceId = "VMJQit9N0hJaCAss";
     dispatch(ADD_VIDEO, {
       payload: {
@@ -130,8 +130,19 @@ const App = () => {
     });
   };
 
-    handleAddVideo();
+  const setVideo = () => {
+    setTimeout(() => {
+handleAddVideo();
+    }, 0)
+ 
+  }
+
+  setVideo();
+
+   
   }, [])
+
+ 
 
   return (
     <div className="flex flex-col h-screen">

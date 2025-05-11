@@ -13,19 +13,19 @@ import ForwardIcon from '../../assets/Forward.svg';
 
 // import { Button } from "../components/ui/button";
 import {
-  ACTIVE_SPLIT,
-  LAYER_CLONE,
-  LAYER_DELETE,
+  // ACTIVE_SPLIT,
+  // LAYER_CLONE,
+  // LAYER_DELETE,
   PLAYER_PAUSE,
   PLAYER_PLAY,
-  TIMELINE_SCALE_CHANGED,
- DRAG_START,
- DRAG_END,
- PLAYER_SEEK,
- PLAYER_TOGGLE_PLAY,
+//   TIMELINE_SCALE_CHANGED,
+//  DRAG_START,
+//  DRAG_END,
+//  PLAYER_SEEK,
+//  PLAYER_TOGGLE_PLAY,
   dispatch,
 } from "@designcombo/events";
-import { frameToTimeString, getCurrentTime, timeToString } from "@/utils/time";
+// import { frameToTimeString, getCurrentTime, timeToString } from "@/utils/time";
 import useStore from "@/store/store";
 // import { SquareSplitHorizontal, Trash, ZoomIn, ZoomOut } from "lucide-react";
 // import {
@@ -43,7 +43,8 @@ import { useEffect, useState } from "react";
 const PlayNavigation = () => {
   const [playing, setPlaying] = useState(false);
  // const { setState, duration, fps, scale, playerRef, activeIds } = useStore();
- const { setState, duration, playerRef } = useStore();
+//  const { setState, duration, playerRef } = useStore();
+ const { playerRef } = useStore();
   // const theState = useStore.getState();
 
  // useUpdateAnsestors({ playing, playerRef });

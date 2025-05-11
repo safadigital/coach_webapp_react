@@ -15,6 +15,11 @@ const Player = () => {
     setPlayerRef(playerRef);
   }, []);
 
+  //  useEffect(() => {
+  //   console.log("Rerendered!");
+  //   console.log("FPS IS NOW: ", fps)
+  // }, [])
+
   return (
     <RemotionPlayer
       ref={playerRef}
