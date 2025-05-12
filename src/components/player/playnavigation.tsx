@@ -169,7 +169,7 @@ const percentage_video = Math.floor(((currentFrame / fps) / (duration / 1000)) *
 </svg>
   </div>
 
-  <div className='visible sm:invisible bottom-[35%] fixed flex w-full text-[#FFF] font-bold text-[18px] new_york_medium_font'>
+  <div className='visible sm:invisible bottom-[35%] fixed flex w-[90%] text-[#FFF] font-bold text-[18px] new_york_medium_font'>
     Meditation, breath-work, and mindfulness exercises
   </div>
 
