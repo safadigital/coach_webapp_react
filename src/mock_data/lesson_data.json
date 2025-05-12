@@ -1,0 +1,76 @@
+{
+   "Platform" : "iOS,Android",
+   "freetext_content" : [],
+   "image_content" : [],
+   "is_complete" : false,
+   "lesson_id" : "body_scanning",
+   "module_id" : "body_scanning_practice_pe",
+   "pages" : 1,
+   "plate_description" : "Listen",
+   "plate_id" : "body_scanning",
+   "plate_length" : "15 MIN",
+   "plate_name" : "Body scanning meditation",
+   "plate_orange_text" : "PRACTICE",
+   "plate_order" : 3,
+   "program_id" : "last_longer",
+   "progress" : 0,
+   "quiz_content" : [],
+   "rating_content" : [],
+   "text_content" : [
+      {
+         "Platform" : "iOS,Android",
+         "content_id" : "random_content_id",
+         "content_order" : 1,
+         "content_type" : "section",
+         "lesson_id" : "body_scanning",
+         "page_id" : "body_scanning",
+         "page_order" : 1,
+         "text" : "PRACTICE"
+      },
+      {
+         "Platform" : "iOS,Android",
+         "content_id" : "random_content_id",
+         "content_order" : 2,
+         "content_type" : "header",
+         "lesson_id" : "body_scanning",
+         "page_id" : "body_scanning",
+         "page_order" : 1,
+         "text" : "Body scanning"
+      },
+      {
+         "Platform" : "iOS,Android",
+         "content_id" : "random_content_id",
+         "content_order" : 3,
+         "content_type" : "normal_text",
+         "lesson_id" : "body_scanning",
+         "page_id" : "body_scanning",
+         "page_order" : 1,
+         "text" : "🕒 Repeat 1 time/week for 3 weeks\n\nThis technique can help you improve your awareness of muscle tension in the body. Get comfortable lying down or seated and take a few deep breaths. Bring awareness to your feet and pay attention to how they feel. Focus on relaxing the area and visualize any tension leaving it before moving on to the next body part and continue through each part of your body."
+      },
+      {
+         "Platform" : "iOS,Android",
+         "content_id" : "random_content_id",
+         "content_order" : 4,
+         "content_type" : "section",
+         "lesson_id" : "body_scanning",
+         "page_id" : "body_scanning",
+         "page_order" : 1,
+         "text" : "Video meditation"
+      }
+   ],
+   "video_content" : [
+      {
+         "Platform" : "iOS,Android",
+         "author" : "Meditation",
+         "content_id" : "body_scanning_video",
+         "content_order" : 5,
+         "content_type" : "video",
+         "lesson_id" : "body_scanning",
+         "page_id" : "body_scanning",
+         "page_order" : 1,
+         "preview_url" : "https://res.cloudinary.com/the-coach/image/upload/v1681813467/body_scan_ftg5yf.jpg",
+         "video_name" : "Body Scan",
+         "video_url" : "https://sexprograms.nyc3.cdn.digitaloceanspaces.com/meditations/2_Step1_1_Body_Scan_Meditation_TriciaBrioux_Dec_2020_s6lblc.mp4"
+      }
+   ]
+}
