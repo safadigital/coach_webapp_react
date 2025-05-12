@@ -154,7 +154,7 @@ const percentage_video = Math.floor(((currentFrame / fps) / (duration / 1000)) *
   return (
 
 <>
-<div className=''>
+<div className='w-[100%] h-[100%] top-[0%] fixed bg-black bg-opacity-70'>
 <div className='ml-5 mr-5'>
 
 <div className='visible sm:invisible bottom-[30%] fixed flex h-1 w-full text-[#B4B7B5] font-bold text-[16px] new_york_medium_font '>
@@ -179,7 +179,7 @@ const percentage_video = Math.floor(((currentFrame / fps) / (duration / 1000)) *
 
 
 
- <div className="visible sm:invisible bottom-[20%] fixed flex w-full justify-between items-center bg-black bg-opacity-60 text-[#B4B7B5] font-bold text-[12px] sp_pro_text_font tracking-[10%] pl-5 pr-5">
+ <div className="visible sm:invisible bottom-[20%] fixed flex w-full justify-between items-center text-[#B4B7B5] font-bold text-[12px] sp_pro_text_font tracking-[10%] pl-5 pr-5">
 
  <div>
  {frameToTimeString({ frame: currentFrame }, { fps })}
@@ -194,7 +194,7 @@ const percentage_video = Math.floor(((currentFrame / fps) / (duration / 1000)) *
 
 </div>
 
-<div className={"visible sm:invisible bottom-7 fixed flex text-center w-full pl-[27%] bg-black bg-opacity-50"}>
+<div className={"visible sm:invisible bottom-7 fixed flex text-center w-full pl-[27%]"}>
 
      
 
