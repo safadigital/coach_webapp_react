@@ -16,7 +16,7 @@ import useTimelineEvents from "./hooks/use-timeline-events";
 import PlayNavigation from "./components/player/playnavigation";
 
 const App = () => {
-  const { playerRef, fps } = useStore();
+  const { playerRef } = useStore();
   useTimelineEvents();
  // const fileInputRef = useRef<HTMLInputElement>(null);
 
