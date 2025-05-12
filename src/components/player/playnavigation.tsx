@@ -37,14 +37,14 @@ import useStore from "@/store/store";
 // } from "../utils/timeline";
 import { useCurrentPlayerFrame } from "@/hooks/use-current-frame";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 // import useUpdateAnsestors from "@/hooks/use-update-unsestors";
 // mport { ITimelineScaleState } from "@designcombo/types";
 
 import { frameToTimeString, timeToString } from "@/utils/time";
 
 const PlayNavigation = () => {
-  const [playing, setPlaying] = useState(false);
+ // const [playing, setPlaying] = useState(false);
  // const { setState, duration, fps, scale, playerRef, activeIds } = useStore();
 //  const { setState, duration, playerRef } = useStore();
  const { playerRef, fps, duration, isAudioMuted, setIsAudioMuted, isVideoPlaying, setIsVideoPlaying } = useStore();
@@ -135,17 +135,21 @@ const percentage_video = Math.floor(((currentFrame / fps) / (duration / 1000)) *
 
   useEffect(() => {
     playerRef?.current?.addEventListener("play", () => {
-      setPlaying(true);
+      setIsVideoPlaying(true);
+  //    setPlaying(true);
     });
     playerRef?.current?.addEventListener("pause", () => {
-      setPlaying(false);
+          setIsVideoPlaying(false);
+  //    setPlaying(false);
     });
     return () => {
       playerRef?.current?.removeEventListener("play", () => {
-        setPlaying(true);
+            setIsVideoPlaying(true);
+      //  setPlaying(true);
       });
       playerRef?.current?.removeEventListener("pause", () => {
-        setPlaying(false);
+            setIsVideoPlaying(false);
+     //   setPlaying(false);
       });
 
      
