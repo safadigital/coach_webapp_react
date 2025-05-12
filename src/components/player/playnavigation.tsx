@@ -154,9 +154,12 @@ const percentage_video = Math.floor(((currentFrame / fps) / (duration / 1000)) *
   return (
 
 <>
-<div className='bg-black bg-opacity-50'>
-<div className='mr-5 ml-5 pr-5'>
+<div className=''>
+<div className='ml-5 mr-5'>
 
+<div className='visible sm:invisible bottom-[30%] fixed flex h-1 w-full text-[#B4B7B5] font-bold text-[16px] new_york_medium_font '>
+  Day 2
+</div>
 
 <div className="visible sm:invisible bottom-[25%] fixed flex h-1 w-full ">
   <progress value={percentage_video} max="100" className="h-full w-[90%]" />
@@ -176,16 +179,16 @@ const percentage_video = Math.floor(((currentFrame / fps) / (duration / 1000)) *
 
 
 
- <div className="visible sm:invisible bottom-[20%] fixed flex w-full justify-between items-center bg-black bg-opacity-50 text-[#B4B7B5] font-bold pl-5 pr-5">
+ <div className="visible sm:invisible bottom-[20%] fixed flex w-full justify-between items-center bg-black bg-opacity-60 text-[#B4B7B5] font-bold text-[12px] sp_pro_text_font tracking-[10%] pl-5 pr-5">
 
  <div>
  {frameToTimeString({ frame: currentFrame }, { fps })}
- &nbsp; { Math.floor(((currentFrame / fps) / (duration / 1000)) * 100) }%
+ {/* &nbsp; { Math.floor(((currentFrame / fps) / (duration / 1000)) * 100) }% */}
  </div>
 
 <div>
  {timeToString({ time: duration })}
- {duration / 1000}
+ {/* {duration / 1000} */}
 </div>
   
 
