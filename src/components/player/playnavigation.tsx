@@ -122,11 +122,11 @@ const PlayNavigation = () => {
   // }
 
   const moveBack15Sec = () => {
-    playerRef?.current?.seekTo(currentFrame - 150);
+    playerRef?.current?.seekTo(currentFrame - 450);
   }
 
   const moveForward15Sec = () => {
-    playerRef?.current?.seekTo(currentFrame + 150);
+    playerRef?.current?.seekTo(currentFrame + 450);
   }
 
 
