@@ -129,7 +129,7 @@ const PlayNavigation = () => {
     playerRef?.current?.seekTo(currentFrame + 450);
   }
 
-
+const percentage_video = Math.floor(((currentFrame / fps) / (duration / 1000)) * 100);
 
   useEffect(() => {
     playerRef?.current?.addEventListener("play", () => {
@@ -155,23 +155,35 @@ const PlayNavigation = () => {
 
 <>
 <div className='bg-black bg-opacity-50'>
-<div className='visible sm:invisible bottom-[23%] fixed flex w-full'>
+<div className='mr-5 ml-5 pr-5'>
+
+
+<div className="visible sm:invisible bottom-[25%] fixed flex h-1 w-full ">
+  <progress value={percentage_video} max="100" className="h-full w-[90%]" />
+</div>
+
+</div>
+
+{/* <div className='visible sm:invisible bottom-[23%] fixed flex w-full'>
   <div className=" ml-5 mr-5 w-full bg-black rounded-full h-[4px] mb-4 dark:bg-black">
-                <div className="bg-[#FF6D03] h-[4px] rounded-full dark:bg-[#FF6D03] w-[20%]" >
+                <div className={`bg-[#FF6D03] h-[4px] rounded-full dark:bg-[#FF6D03] w-[${percentage_video}%]`} >
                 </div>
               </div>
-</div>
+</div> */}
   
+
 
 
  <div className="visible sm:invisible bottom-[20%] fixed flex w-full justify-between items-center bg-black bg-opacity-50 text-[#B4B7B5] font-bold pl-5 pr-5">
 
  <div>
  {frameToTimeString({ frame: currentFrame }, { fps })}
+ &nbsp; { Math.floor(((currentFrame / fps) / (duration / 1000)) * 100) }%
  </div>
 
 <div>
  {timeToString({ time: duration })}
+ {duration / 1000}
 </div>
   
 

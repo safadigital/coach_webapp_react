@@ -70,3 +70,18 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+
+progress[value] {
+  background-color: #2B3330;
+  color: #FF6D03;
+  /* border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset; */
+}
+
+progress {
+  background-color: #FF6D03;
+  /* border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset; */
+}
