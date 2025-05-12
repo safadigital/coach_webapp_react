@@ -6,7 +6,7 @@ import {
   dispatch
 } from "@designcombo/events";
 // import { Button } from "./components/ui/button";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Timeline from "./components/timeline";
 import { generateId } from "@designcombo/timeline";
 // import { DEFAULT_FONT } from "./constants/font";
