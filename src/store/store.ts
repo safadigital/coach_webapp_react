@@ -30,11 +30,20 @@ interface ITimelineStore {
   setState: (state: any) => Promise<void>;
 
   isPlayNavigationShown: boolean;
-  setIsPlayNavigationShown: (satte: boolean) => void;
+  setIsPlayNavigationShown: (state: boolean) => void;
+
+  isVideoPlaying: boolean;
+  setIsVideoPlaying: (state: boolean) => void;
+
+  isAudioMuted: boolean;
+  setIsAudioMuted: (state: boolean) => void;
+
 }
 
 const useStore = create<ITimelineStore>((set) => ({
   isPlayNavigationShown: false,
+  isVideoPlaying: false,
+  isAudioMuted: false,
   timeline: null,
   duration: 5000,
   fps: 30,
@@ -60,6 +69,16 @@ const useStore = create<ITimelineStore>((set) => ({
   setIsPlayNavigationShown: (new_playnavigation: boolean) =>
     set(() => ({
       isPlayNavigationShown: new_playnavigation
+    })),
+
+    setIsVideoPlaying: (new_videoplaying: boolean) =>
+    set(() => ({
+      isVideoPlaying: new_videoplaying
+    })),
+
+      setIsAudioMuted: (new_audiomuted: boolean) =>
+    set(() => ({
+      isAudioMuted: new_audiomuted
     })),
 
   setTimeline: (timeline: CanvasTimeline) =>
