@@ -6,7 +6,7 @@ import {
   dispatch
 } from "@designcombo/events";
 // import { Button } from "./components/ui/button";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Timeline from "./components/timeline";
 import { generateId } from "@designcombo/timeline";
 // import { DEFAULT_FONT } from "./constants/font";
@@ -18,6 +18,17 @@ import PlayNavigation from "./components/player/playnavigation";
 const App = () => {
   const { playerRef } = useStore();
   useTimelineEvents();
+
+  const [isPlayNavigationShown, setIsPlayNavigationShown] = useState(true);
+
+
+  const showPlayNavigation = () => {
+    setIsPlayNavigationShown(true);
+    setTimeout(() => {
+      setIsPlayNavigationShown(true);
+    }, 3000)
+  }
+
  // const fileInputRef = useRef<HTMLInputElement>(null);
 
   // const handleClick = () => {
@@ -170,39 +181,17 @@ handleAddVideo();
       </div> */}
 
       <div className="">
-        <div className="w-[100vw] h-[100vh] bg-transparent">
+        <div
+        onClick={showPlayNavigation}
+        className="w-[100vw] h-[100vh] bg-transparent">
           <Player />
         </div>
 
-        {/* <div className="m-auto flex gap-2 py-8">
-          <input
-            ref={fileInputRef}
-            id="file-upload-handle"
-            type="file"
-            accept="video/*"
-            onChange={(e) => handleFileChange(Array.from(e.target.files || []))}
-            className="hidden"
-          />
-          <Button size={"sm"} onClick={handleClick} variant={"secondary"}>
-            Upload
-          </Button>
-          <Button size={"sm"} onClick={handleAddImage} variant={"secondary"}>
-            Add Image
-          </Button>
-          <Button size={"sm"} onClick={handleAddVideo} variant={"secondary"}>
-            Add Video
-          </Button>
-          <Button size={"sm"} onClick={handleAddAudio} variant={"secondary"}>
-            Add Audio
-          </Button>
-          <Button size={"sm"} onClick={handleAddText} variant={"secondary"}>
-            Add Text
-          </Button>
-        </div> */}
+       
 
       </div>
 
- {playerRef && <PlayNavigation />}
+ {playerRef && isPlayNavigationShown && <PlayNavigation />}
 
       {playerRef && <Timeline />}
     </div>

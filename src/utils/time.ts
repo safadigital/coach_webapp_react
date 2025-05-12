@@ -22,7 +22,8 @@ export const frameToTimeString = (
   } else {
     return `${minutes.toString().padStart(2, "0")}:${seconds
       .toString()
-      .padStart(2, "0")}:${milliseconds.toString().padStart(2, "0")}`;
+      .padStart(2, "0")}`;
+      // :${milliseconds.toString().padStart(2, "0")}`;
   }
 };
 
@@ -47,7 +48,8 @@ export const timeToString = ({ time }: { time: number }): string => {
   } else {
     return `${minutes.toString().padStart(2, "0")}:${seconds
       .toString()
-      .padStart(2, "0")}:${milliseconds.toString().padStart(2, "0")}`;
+      .padStart(2, "0")}`;
+      // :${milliseconds.toString().padStart(2, "0")}`;
   }
 };
 

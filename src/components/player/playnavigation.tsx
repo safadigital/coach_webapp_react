@@ -23,6 +23,7 @@ import {
 //  DRAG_END,
 //  PLAYER_SEEK,
 //  PLAYER_TOGGLE_PLAY,
+
   dispatch,
 } from "@designcombo/events";
 // import { frameToTimeString, getCurrentTime, timeToString } from "@/utils/time";
@@ -40,11 +41,13 @@ import { useEffect, useState } from "react";
 // import useUpdateAnsestors from "@/hooks/use-update-unsestors";
 // mport { ITimelineScaleState } from "@designcombo/types";
 
+import { frameToTimeString, timeToString } from "@/utils/time";
+
 const PlayNavigation = () => {
   const [playing, setPlaying] = useState(false);
  // const { setState, duration, fps, scale, playerRef, activeIds } = useStore();
 //  const { setState, duration, playerRef } = useStore();
- const { playerRef } = useStore();
+ const { playerRef, fps, duration } = useStore();
 
  const [isMuted, setIsMuted] = useState(false);
 
@@ -86,16 +89,22 @@ const PlayNavigation = () => {
 //     });
 //   };
 
+
+
   const handlePlay = () => {
     dispatch(PLAYER_PLAY);
-    console.log("Player began playing")
-    // setPlaying(true);
+    console.log("Player began playing");
+    // dispatch("playback:2");
   };
 
   const handlePause = () => {
     dispatch(PLAYER_PAUSE);
    // setPlaying(false);
   };
+
+  // const PlayerBackRateChange = (var) => {
+//    playerRef?.current?.dispatchRateChange(var);
+// }
 
   // const maximise = () => {
   //   playerRef?.current?.requestFullscreen();
@@ -136,13 +145,32 @@ const PlayNavigation = () => {
       playerRef?.current?.removeEventListener("pause", () => {
         setPlaying(false);
       });
+
+     
+
     };
   }, [playerRef]);
 
   return (
 
+<>
+<div className='bg-black bg-opacity-50'>
+ <div className="visible sm:invisible bottom-[20%] fixed flex w-full justify-between items-center bg-black bg-opacity-50 text-[#B4B7B5] font-bold pl-5 pr-5">
 
-     <div className={"visible sm:invisible bottom-7 fixed flex text-center w-full pl-[27%]"}>
+ <div>
+ {frameToTimeString({ frame: currentFrame }, { fps })}
+ </div>
+
+<div>
+ {timeToString({ time: duration })}
+</div>
+  
+
+</div>
+
+<div className={"visible sm:invisible bottom-7 fixed flex text-center w-full pl-[27%] bg-black bg-opacity-50"}>
+
+     
 
   
          {/* <svg
@@ -266,8 +294,9 @@ xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={
 
         </div> 
 
+        </div>
+</>
     
-
 
   );
 };
