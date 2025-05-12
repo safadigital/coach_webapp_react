@@ -157,6 +157,10 @@ const percentage_video = Math.floor(((currentFrame / fps) / (duration / 1000)) *
 <div className='w-[100%] h-[100%] top-[0%] fixed bg-black bg-opacity-70'>
 <div className='ml-5 mr-5'>
 
+  <div className='visible sm:invisible bottom-[35%] fixed flex w-full text-[#FFF] font-bold text-[18px] new_york_medium_font'>
+    Meditation, breath-work, and mindfulness exercises
+  </div>
+
 <div className='visible sm:invisible bottom-[30%] fixed flex h-1 w-full text-[#B4B7B5] font-bold text-[16px] new_york_medium_font '>
   Day 2
 </div>
