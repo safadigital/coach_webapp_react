@@ -161,7 +161,6 @@ const percentage_video = Math.floor(((currentFrame / fps) / (duration / 1000)) *
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-4">
   <path fillRule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clipRule="evenodd" />
 </svg>
-
   </div>
 
   <div className='visible sm:invisible bottom-[35%] fixed flex w-full text-[#FFF] font-bold text-[18px] new_york_medium_font'>
@@ -208,6 +207,12 @@ const percentage_video = Math.floor(((currentFrame / fps) / (duration / 1000)) *
 <div className={"visible sm:invisible bottom-7 fixed flex text-center w-full pl-[27%]"}>
 
      
+      <span className='visible sm:invisible bottom-11 left-8 mr-20 fixed flex w-[32px] h-[32px] bg-[#141D19] items-center justify-center rounded-full cursor-pointer'>
+    {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-4">
+  <path fillRule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clipRule="evenodd" />
+</svg> */}
+1x
+  </span>
 
   
          {/* <svg
