@@ -162,6 +162,8 @@ const percentage_video = Math.floor(((currentFrame / fps) / (duration / 1000)) *
   <progress value={percentage_video} max="100" className="h-full w-[90%]" />
 </div>
 
+
+
 </div>
 
 {/* <div className='visible sm:invisible bottom-[23%] fixed flex w-full'>
