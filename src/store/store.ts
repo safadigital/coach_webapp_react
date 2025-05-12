@@ -28,9 +28,13 @@ interface ITimelineStore {
   setPlayerRef: (playerRef: React.RefObject<PlayerRef> | null) => void;
 
   setState: (state: any) => Promise<void>;
+
+  isPlayNavigationShown: boolean;
+  setIsPlayNavigationShown: (satte: boolean) => void;
 }
 
 const useStore = create<ITimelineStore>((set) => ({
+  isPlayNavigationShown: false,
   timeline: null,
   duration: 5000,
   fps: 30,
@@ -52,6 +56,11 @@ const useStore = create<ITimelineStore>((set) => ({
   transitionIds: [],
   transitionsMap: {},
   trackItemsMap: {},
+
+  setIsPlayNavigationShown: (new_playnavigation: boolean) =>
+    set(() => ({
+      isPlayNavigationShown: new_playnavigation
+    })),
 
   setTimeline: (timeline: CanvasTimeline) =>
     set(() => ({

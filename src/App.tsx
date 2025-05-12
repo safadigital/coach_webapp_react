@@ -19,13 +19,14 @@ const App = () => {
   const { playerRef } = useStore();
   useTimelineEvents();
 
-  const [isPlayNavigationShown, setIsPlayNavigationShown] = useState(true);
+ const isPlayNavigationShown = useStore((state) => state.isPlayNavigationShown );
 
+  const setIsPlayNavigationShown = useStore((state) => state.setIsPlayNavigationShown );
 
   const showPlayNavigation = () => {
     setIsPlayNavigationShown(true);
     setTimeout(() => {
-      setIsPlayNavigationShown(true);
+      setIsPlayNavigationShown(false);
     }, 3000)
   }
 
