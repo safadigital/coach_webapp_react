@@ -7,6 +7,7 @@ import statusNext from '../../assets/status_next.svg';
 
 // fake data
 import data from '../../mock_data/daily_plan.json';
+import { useEffect, useState } from 'react';
 //interface Props {}
 
 // const HomePage = (props: Props) => {
@@ -15,6 +16,7 @@ const HomePage = () => {
 
 
     console.log(data.plan[0]);
+    const [progressInPercent, setProgressInPercent] = useState(0);
 
     const headline = data.plan[0].headline;
     const lessons = data.plan[0].questions;
@@ -23,26 +25,28 @@ const HomePage = () => {
     const total_days = data.plan[0].total_days;
     const day_in_program = data.plan[0].day_in_program;
 
-    const progress_in_percent = Math.ceil((day_in_program / total_days) * 100);
-    const class_progress = 'w-[' + progress_in_percent + '%]';
+    const progress = data.progress;
+  
+
+
+    useEffect(() => {
+setProgressInPercent(20);
+    }, [])
+
 
     return (
         <>
          <header className="visible sm:invisible lg:invisible flex items-center justify-between pr-5 pl-5 pt-5">
         <div className="flex-column">
             <h3 className="text-xl font-bold new_york_medium_font">{headline}</h3>
-            <div className="flex items-start pt-3">
-                <div className="w-20 bg-gray-200 rounded-full h-1.5 mb-4 dark:bg-gray-200">
-                    <div className={`bg-[#FF6D03] h-1.5 rounded-full dark:bg-[#FF6D03] ${class_progress}`}>
-
-   {/* <progress className='' value={progress_in_percent} /> */}
-                      
-                    </div>
-                 
-                   
-                  </div>
-                  &nbsp;
-                  <sup className="text-xs text-[#696E6C] font-bold tracking-widest">{progress_in_percent}%</sup>
+            <div className="">
+                <span className='smallProgress flex items-start pt-3'>
+  <progress className='h-1.5 w-20' value={progress} max={100} />
+      &nbsp;
+                  <sup className="text-xs text-[#696E6C] font-bold tracking-widest">{progress}%</sup>
+                </span>
+              
+              
             </div>
           
         </div>
