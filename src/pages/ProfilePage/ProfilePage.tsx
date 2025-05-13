@@ -1,5 +1,10 @@
 import arrowLeft from '../../assets/arrow_left.svg';
 import profileImg from '../../assets/profile.svg';
+import supplementsImg from '../../assets/icon_supplements.svg';
+import accountImg from '../../assets/icon_account.svg';
+import supportImg from '../../assets/icon_support.svg';
+import faqImg from '../../assets/icon_faq.svg';
+import termsImg from '../../assets/icon_terms.svg';
 
 const ProfilePage = () => {
 
@@ -22,7 +27,7 @@ const ProfilePage = () => {
     {/* <!-- item --> */}
     <div className="visible sm:invisible bg-[#F3F4F4] mt-2 mb-5 ml-3 mr-3 p-[16px] flex justify-between items-center">
         <div className="flex justify-start">
-            <img src="images/icon_supplements.svg" alt="" />
+            <img src={supplementsImg} alt="" />
             <span className="new_york_medium_font text-[18px] pl-5">My Supplements</span>
         </div>
 <div>
@@ -34,7 +39,7 @@ const ProfilePage = () => {
        {/* <!-- item --> */}
     <div className="visible sm:invisible bg-[#F3F4F4] mt-2 mb-1 ml-3 mr-3 p-[16px] flex justify-between items-center">
         <div className="flex justify-start">
-            <img src="images/icon_account.svg" alt="" />
+            <img src={accountImg} alt="" />
             <span className="new_york_medium_font text-[18px] pl-5">Account Settings</span>
         </div>
 <div>
@@ -46,7 +51,7 @@ const ProfilePage = () => {
        {/* <!-- item --> */}
     <div className="visible sm:invisible bg-[#F3F4F4] mt-2 mb-1 ml-3 mr-3 p-[16px] flex justify-between items-center">
         <div className="flex justify-start">
-            <img src="images/icon_support.svg" alt="" />
+            <img src={supportImg} alt="" />
             <span className="new_york_medium_font text-[18px] pl-5">Support</span>
         </div>
 <div>
@@ -58,7 +63,7 @@ const ProfilePage = () => {
       {/* <!-- item --> */}
     <div className="visible sm:invisible bg-[#F3F4F4] mt-2 mb-1 ml-3 mr-3 p-[16px] flex justify-between items-center">
         <div className="flex justify-start">
-            <img src="images/icon_faq.svg" alt="" />
+            <img src={faqImg} alt="" />
             <span className="new_york_medium_font text-[18px] pl-5">FAQ</span>
         </div>
 <div>
@@ -70,7 +75,7 @@ const ProfilePage = () => {
       
     <div className="visible sm:invisible bg-[#F3F4F4] mt-2 mb-1 ml-3 mr-3 p-[16px] flex justify-between items-center">
         <div className="flex justify-start">
-            <img src="images/icon_terms.svg" alt="" />
+            <img src={termsImg} alt="" />
             <span className="new_york_medium_font text-[18px] pl-5">Terms & Privacy Policy</span>
         </div>
 <div>
