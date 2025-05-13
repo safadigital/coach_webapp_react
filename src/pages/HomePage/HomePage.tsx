@@ -14,10 +14,12 @@ import data from '../../mock_data/daily_plan.json';
 const HomePage = () => {
 
 
-    console.log(data.plan[0].questions);
+    console.log(data.plan[0]);
 
     const headline = data.plan[0].headline;
     const lessons = data.plan[0].questions;
+    const theory_lessons = lessons.filter((lesson) => lesson.section_id === 0 );
+    const practice_lessons = lessons.filter((lesson) => lesson.section_id === 1 );
     const total_days = data.plan[0].total_days;
     const day_in_program = data.plan[0].day_in_program;
 
@@ -64,7 +66,7 @@ const HomePage = () => {
 
 {
 
-lessons.map((lesson, idx) => (
+theory_lessons.map((lesson, idx) => (
   <div key={idx} className="visible sm:invisible columns pr-5 pl-5 pt-1 mt-2 mb-2 ">
   
     <div className="flex bg-[#F3F4F4] topleftrounded bottomleftrounded pt-[16px] pl-[16px] pb-[16px] bottom_shadow">
@@ -85,107 +87,39 @@ lessons.map((lesson, idx) => (
 
 }
 
-    {/* <!-- card --> */}
-   <div className="visible sm:invisible columns pr-5 pl-5 pt-1 mt-2 mb-2 ">
-  
-    <div className="flex bg-[#F3F4F4] topleftrounded bottomleftrounded pt-[16px] pl-[16px] pb-[16px] bottom_shadow">
-        <img className="couseimage" src="images/lesson_img.png" alt="" />
-    </div>
-    <div className="flex-column bottomrightrounded toprightrounded content-between bg-[#F3F4F4] pl-3 pr-[16px] pt-[16px] pb-[16px] bottom_shadow">
-        <div className="flex flex-row w-full justify-between items-center">
-            <p className="text-[16px] font-bold new_york_medium_font mr-1">Welcome</p>
-            <img className="w-[30px] h-[30px]" src={statusDone} alt="" />
-                </div>
-                <div className="mttauto">
-                    <p className="text-[10px] text-[#696E6C] uppercase font-bold sp_pro_text_medium_font wide">Lesson 1</p>
-                    <p className="text-[10px] text-[#696E6C] uppercase font-bold sp_pro_text_medium_font wide">2 min</p>     
-                        </div>
-    </div>
-   </div>
+   
 
 
-   {/* <!-- end of card -->
-
-    <!-- card --> */}
-    <div className="visible sm:invisible columns pr-5 pl-5 pt-2  mt-2 mb-2 ">
-  
-        <div className="flex bg-[#F3F4F4] topleftrounded bottomleftrounded pt-[16px] pl-[16px] pb-[16px] bottom_shadow">
-            <img className="couseimage" src="images/lesson_img.png" alt="" />
-        </div>
-        <div className="flex-column bottomrightrounded toprightrounded content-between bg-[#F3F4F4] pl-3 pr-[16px] pt-[16px] pb-[16px] bottom_shadow">
-            <div className="flex flex-row w-full justify-between items-center">
-                <p className="text-[16px] font-bold new_york_medium_font mr-1">Getting to know your body</p>
-                <img className="w-[30px] h-[30px]" src={statusNext} alt="" />
-                    </div>
-                    <div className="mttauto">
-                        <p className="text-[10px] text-[#696E6C] uppercase font-bold sp_pro_text_medium_font wide">Lesson 2</p>
-                        <p className="text-[10px] text-[#696E6C] uppercase font-bold sp_pro_text_medium_font wide">3 min</p>     
-                            </div>
-        </div>
-       </div>
-       {/* <!-- end of card -->
-
-       <!-- card --> */}
-    <div className="visible sm:invisible columns pr-5 pl-5 pt-2  mt-2 mb-2 ">
-  
-        <div className="flex bg-[#F3F4F4] topleftrounded bottomleftrounded pt-[16px] pl-[16px] pb-[16px] bottom_shadow">
-            <img className="couseimage" src="images/lesson_img.png" alt="" />
-        </div>
-        <div className="flex-column bottomrightrounded toprightrounded content-between bg-[#F3F4F4] pl-3 pr-[16px] pt-[16px] pb-[16px] bottom_shadow">
-            <div className="flex flex-row w-full justify-between items-center">
-                <p className="text-[16px] font-bold new_york_medium_font mr-1">Getting to know your body</p>
-                <img className="w-[30px] h-[30px]" src="images/status_next.svg" alt="" />
-                    </div>
-                    <div className="mttauto">
-                        <p className="text-[10px] text-[#696E6C] uppercase font-bold sp_pro_text_medium_font wide">Lesson 2</p>
-                        <p className="text-[10px] text-[#696E6C] uppercase font-bold sp_pro_text_medium_font wide">3 min</p>     
-                            </div>
-        </div>
-       </div>
-       {/* <!-- end of card --> */}
 
        <div className="visible sm:invisible flex pr-5 pl-5 pt-3">
         <p className="text-[#696E6C] text-[10px] uppercase font-bold sp_pro_text_medium_font wide">Daily practice</p>
             </div>
 
 
-              {/* <!-- card --> */}
-    <div className="visible sm:invisible columns pr-5 pl-5 pt-2  mt-2 mb-2 ">
-  
-        <div className="flex bg-[#F3F4F4] topleftrounded bottomleftrounded pt-[16px] pl-[16px] pb-[16px] bottom_shadow">
-            <img className="couseimage" src="images/level_img.png" alt="" />
-        </div>
-        <div className="flex-column bottomrightrounded toprightrounded content-between bg-[#F3F4F4] pl-3 pr-[16px] pt-[16px] pb-[16px] bottom_shadow">
-            <div className="flex flex-row w-full justify-between items-center">
-                <p className="text-[16px] font-bold new_york_medium_font mr-1">Morning Kegel Exercise</p>
-                <img className="w-[30px] h-[30px]" src="images/status_next.svg" alt="" />
-                    </div>
-                    <div className="mttauto">
-                        <p className="text-[10px] text-[#696E6C] uppercase font-bold sp_pro_text_medium_font wide">Lesson 2</p>
-                        <p className="text-[10px] text-[#696E6C] uppercase font-bold sp_pro_text_medium_font wide">3 min</p>     
-                            </div>
-        </div>
-       </div>
-       {/* <!-- end of card -->
+       {
 
-        <!-- card --> */}
-    <div className="visible sm:invisible columns pr-5 pl-5 pt-2  mt-2 mb-2 ">
+practice_lessons.map((lesson, idx) => (
+  <div key={idx} className="visible sm:invisible columns pr-5 pl-5 pt-1 mt-2 mb-2 ">
   
-        <div className="flex bg-[#F3F4F4] topleftrounded bottomleftrounded pt-[16px] pl-[16px] pb-[16px] bottom_shadow">
-            <img className="couseimage" src="images/level_img.png" alt="" />
-        </div>
-        <div className="flex-column bottomrightrounded toprightrounded content-between bg-[#F3F4F4] pl-3 pr-[16px] pt-[16px] pb-[16px] bottom_shadow">
-            <div className="flex flex-row w-full justify-between items-center">
-                <p className="text-[16px] font-bold new_york_medium_font mr-1">Morning Kegel Exercise</p>
-                <img className="w-[30px] h-[30px]" src="images/status_next.svg" alt="" />
-                    </div>
-                    <div className="mttauto">
-                        <p className="text-[10px] text-[#696E6C] uppercase font-bold sp_pro_text_medium_font wide">Lesson 2</p>
-                        <p className="text-[10px] text-[#696E6C] uppercase font-bold sp_pro_text_medium_font wide">3 min</p>     
-                            </div>
-        </div>
-       </div>
-       {/* <!-- end of card --> */}
+    <div className="flex bg-[#F3F4F4] topleftrounded bottomleftrounded pt-[16px] pl-[16px] pb-[16px] bottom_shadow">
+        <img className="couseimage" src={lesson.main_image} alt="" />
+    </div>
+    <div className="flex-column bottomrightrounded toprightrounded content-between bg-[#F3F4F4] pl-3 pr-[16px] pt-[16px] pb-[16px] bottom_shadow">
+        <div className="flex flex-row w-full justify-between items-center">
+            <p className="text-[16px] font-bold new_york_medium_font mr-1">{lesson.headline}</p>
+            <img className="w-[30px] h-[30px]" src={ lesson.completed ? statusDone : statusNext} alt="" />
+                </div>
+                <div className="mttauto">
+                    <p className="text-[10px] text-[#696E6C] uppercase font-bold sp_pro_text_medium_font wide">{lesson.description}</p>
+                    <p className="text-[10px] text-[#696E6C] uppercase font-bold sp_pro_text_medium_font wide">{lesson.duration}</p>     
+                        </div>
+    </div>
+   </div>
+))
+
+}
+
+      
         </>
     )
 
