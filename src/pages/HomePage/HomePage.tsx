@@ -5,33 +5,98 @@ import rightArrov from '../../assets/right_arrow.svg';
 import statusDone from '../../assets/status_done.svg';
 import statusNext from '../../assets/status_next.svg';
 
+import axios from 'axios';
+
 // fake data
-import data from '../../mock_data/daily_plan.json';
+// import data from '../../mock_data/daily_plan.json';
 import { useEffect, useState } from 'react';
+// import { useParams } from 'react-router-dom';
 //interface Props {}
 
 // const HomePage = (props: Props) => {
 
 const HomePage = () => {
 
+  const query = new URLSearchParams(location.search);
+    const user_id = query.get('user_id')
+    console.log("user id from user: ", user_id)
 
-    console.log(data.plan[0]);
-    const [progressInPercent, setProgressInPercent] = useState(0);
+    const [userId, setUserId] = useState('');
+   
 
-    const headline = data.plan[0].headline;
-    const lessons = data.plan[0].questions;
-    const theory_lessons = lessons.filter((lesson) => lesson.section_id === 0 );
-    const practice_lessons = lessons.filter((lesson) => lesson.section_id === 1 );
-    const total_days = data.plan[0].total_days;
-    const day_in_program = data.plan[0].day_in_program;
+  //  console.log("params from user: ", params);
 
-    const progress = data.progress;
+    const [data, setData] = useState<any>({});
+
+    const [headline, setHeadline] = useState("");
+  //  const [lessons, setLessons] = useState([]);
+    const [theoryLessons, setTheoryLessons] = useState([]);
+    const [practiceLessons, setPracticeLessons] = useState([]);
+    const [totalDays, setTotalDays] = useState(0);
+    const [dayInProgram, setDayInProgram] = useState(0);
+    const [progress, setProgress] = useState(0);
+
+
+   // console.log(data.plan[0]);
+
+console.log("DATA FROM SERVER: ", data)
+// console.log(lessons)
+    // const headline = data?.plan[0]?.headline;
+    // const lessons = data?.plan[0]?.questions;
+    // const theory_lessons = lessons.filter((lesson: any) => lesson.section_id === 0 );
+    // const practice_lessons = lessons.filter((lesson: any) => lesson.section_id === 1 );
+    // const total_days = data?.plan[0]?.total_days;
+    // const day_in_program = data?.plan[0]?.day_in_program;
+
+    // const progress = data?.progress;
+
+    //  const headline = ""
+    // const lessons: any = [];
+    // const theory_lessons = lessons.filter((lesson: any) => lesson.section_id === 0 );
+    // const practice_lessons = lessons.filter((lesson: any) => lesson.section_id === 1 );
+    // const total_days = 20;
+    // const day_in_program = 2;
+
+    // const progress = 20;
   
 
 
     useEffect(() => {
-setProgressInPercent(20);
-    }, [])
+         if (user_id) {
+        setUserId(user_id);
+    } else {
+        setUserId("ios_p1W7YHzv2DblPDIYNUWGuV8A5s02");
+    }
+
+axios.get(`/api/v1/daily_plan/v3/?user_id=${userId}`, {
+    headers: {
+        'Access-Control-Allow-Origin': '*',
+      'Content-Type': 'application/json',
+        'User-Agent': 'android',
+        'AppVersion': '1.18.2',
+        'Authorization': 'Token Testoster0ne!',
+       
+    }
+})
+.then(response => {
+  //  console.log('Data:', response.data);
+    setData(response.data);
+    setHeadline(response.data?.plan[0]?.headline);
+   // setLessons(response.data?.plan[0]?.questions);
+
+    setTheoryLessons(response.data?.plan[0]?.questions.filter((lesson: any) => lesson.section_id === 0 ));
+
+    setPracticeLessons(response.data?.plan[0]?.questions.filter((lesson: any) => lesson.section_id === 1 ));
+
+    setTotalDays(response.data?.plan[0]?.total_days);
+    setDayInProgram(response.data?.plan[0]?.day_in_program);
+    setProgress(response.data?.progress);
+
+})
+.catch(error => {
+    console.error('Error:', error);
+});
+    }, [user_id])
 
 
     return (
@@ -59,7 +124,7 @@ setProgressInPercent(20);
 
     <div className="visible sm:invisible flex items-center justify-between pr-5 pl-5 pt-3">
 <img className="cursor-pointer" src={leftArrov} alt="" />
-<p className="text-[#696E6C] text-xs font-bold new_york_medium_font">Day {day_in_program} of {total_days}</p>
+<p className="text-[#696E6C] text-xs font-bold new_york_medium_font">Day {dayInProgram} of {totalDays}</p>
 <img className="cursor-pointer" src={rightArrov} alt="" />
     </div>
 
@@ -70,7 +135,7 @@ setProgressInPercent(20);
 
 {
 
-theory_lessons.map((lesson, idx) => (
+theoryLessons.map((lesson: any, idx: number) => (
   <div key={idx} className="visible sm:invisible columns pr-5 pl-5 pt-1 mt-2 mb-2 ">
   
     <div className="flex bg-[#F3F4F4] topleftrounded bottomleftrounded pt-[16px] pl-[16px] pb-[16px] bottom_shadow">
@@ -102,7 +167,7 @@ theory_lessons.map((lesson, idx) => (
 
        {
 
-practice_lessons.map((lesson, idx) => (
+practiceLessons.map((lesson: any, idx: number) => (
   <div key={idx} className="visible sm:invisible columns pr-5 pl-5 pt-1 mt-2 mb-2 ">
   
     <div className="flex bg-[#F3F4F4] topleftrounded bottomleftrounded pt-[16px] pl-[16px] pb-[16px] bottom_shadow">

@@ -12,11 +12,30 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "./src")
     }
+  },
+  server: {
+    proxy: {
+       '/api': {
+           target: 'https://content.the.coach/api', 
+           changeOrigin: true,
+           rewrite: (path) => path.replace(/^\/api/, ''),
+           
+           configure: (proxy, options) => {
+              proxy.on('error', (err, _req, _res) => {
+               console.log('error', err);
+              });
+              proxy.on('proxyReq', (proxyReq, req, _res) => {
+               console.log('Request sent to target:', req.method, req.url);
+              });
+              proxy.on('proxyRes', (proxyRes, req, _res) => {
+               console.log('Response received from target:', proxyRes.statusCode, req.url);
+              });
+        },
+    }
   }
-  // server: {
-  //   headers: {
-  //     "Cross-Origin-Opener-Policy": "same-origin",
-  //     "Cross-Origin-Embedder-Policy": "require-corp",
-  //   },
-  // },
+    // headers: {
+    //   "Cross-Origin-Opener-Policy": "same-origin",
+    //   "Cross-Origin-Embedder-Policy": "require-corp",
+    // },
+  },
 });
