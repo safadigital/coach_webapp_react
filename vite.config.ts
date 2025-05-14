@@ -1,10 +1,12 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
+// import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
+// import basicSsl from '@vitejs/plugin-basic-ssl';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+   plugins: [react()],
   optimizeDeps: {
     // exclude: ["@ffmpeg/ffmpeg", "@ffmpeg/util"],
   },
@@ -15,7 +17,15 @@ export default defineConfig({
   },
   server: {
     proxy: {
-"/api": "https://content.the.coach",
+
+      //   '/api': {
+      //   target: 'https://content.the.coach',
+      //   changeOrigin: true,
+      //   // rewrite: (path) => path.replace(/^\/api/, ''),
+      // },
+
+ "/api": "https://content.the.coach",
+// "https://content.the.coach": "https://content.the.coach",
     //    '/api': {
     //        target: 'https://content.the.coach/api', 
     //        changeOrigin: true,
@@ -33,10 +43,19 @@ export default defineConfig({
     //           });
     //     },
     // }
-  }
-    // headers: {
-    //   "Cross-Origin-Opener-Policy": "same-origin",
-    //   "Cross-Origin-Embedder-Policy": "require-corp",
-    // },
+  },
+  
+  // build: {
+  //   rollupOptions: {
+  //     output: {
+  //       entryFileNames: 'main-bundle.js',
+  //       assetFileNames: 'assets/[name][extname]',
+  //     },
+  //   },
+  // },
+    headers: {
+     'Access-Control-Allow-Origin': '*',
+      // "Cross-Origin-Embedder-Policy": "require-corp",
+    },
   },
 });

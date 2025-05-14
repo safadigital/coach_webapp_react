@@ -38,9 +38,19 @@ interface ITimelineStore {
   isAudioMuted: boolean;
   setIsAudioMuted: (state: boolean) => void;
 
+  // lesson data
+  totalPages: number;
+  setTotalPages: (state: number) => void;
+
+  currentPage: number;
+  setCurrentPage: (state: number) => void;
+
+
 }
 
 const useStore = create<ITimelineStore>((set) => ({
+  totalPages: 0,
+  currentPage: 1,
   isPlayNavigationShown: false,
   isVideoPlaying: false,
   isAudioMuted: false,
@@ -65,6 +75,18 @@ const useStore = create<ITimelineStore>((set) => ({
   transitionIds: [],
   transitionsMap: {},
   trackItemsMap: {},
+
+
+setTotalPages: (state: number) =>
+    set(() => ({
+      totalPages: state
+    })),
+
+setCurrentPage: (state: number) =>
+    set(() => ({
+      currentPage: state
+    })),
+  
 
   setIsPlayNavigationShown: (new_playnavigation: boolean) =>
     set(() => ({

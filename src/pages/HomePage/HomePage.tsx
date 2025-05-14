@@ -94,7 +94,10 @@ setIsLoading(true);
  
     if (loc != undefined) {
  user_id = loc.search.split("=")[1];
+ console.log("Inputted user id: ", user_id);
+ 
  setUserId(user_id);
+ console.log('Saved user id from user: ', userId);
     }
 
 axios.get(`${baseurl}${userId}`, {
