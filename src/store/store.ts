@@ -51,10 +51,14 @@ interface ITimelineStore {
   pageContentItems: any[];
   setPageContentItems: (state: any[]) => void;
 
+  lessonData: any;
+  setLessonData: (state: any) => void;
+
 
 }
 
 const useStore = create<ITimelineStore>((set) => ({
+  lessonData: {},
   totalPages: 0,
   currentPage: 1,
   lessonTitle: "",
@@ -85,6 +89,10 @@ const useStore = create<ITimelineStore>((set) => ({
   trackItemsMap: {},
 
 
+ setLessonData: (state: any) =>
+    set(() => ({
+      lessonData: state
+    })),
 
    setPageContentItems: (state: any[]) =>
     set(() => ({

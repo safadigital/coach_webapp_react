@@ -3,18 +3,26 @@ import data from '../../mock_data/lesson_data.json';
 import useStore from '@/store/store';
 import LessonHeader from '@/components/lesson/LessonHeader';
 import { getLessonContent } from '@/utils/lesson_content';
+import PageContent from '@/components/lesson/PageContent';
 
 const LessonPage = () => {
 
 console.log("Lesson data: ", data);
 
 // const { totalPages, setTotalPages, currentPage, setCurrentPage } = useStore();
-const {  setTotalPages, setCurrentPage, setLessonTitle, currentPage, setPageContentItems } = useStore();
+const { setLessonData, currentPage } = useStore();
 // data from lesson in zustand
 
 const new_lesson_content_arr = getLessonContent(data.freetext_content, data.image_content, data.quiz_content, data.rating_content, data.text_content, data.video_content, currentPage);
 
-setPageContentItems(new_lesson_content_arr);
+function setDataToStore() {
+    setLessonData(data);
+   
+// setTotalPages(data.pages);
+// setLessonTitle(data.plate_name);
+//  setCurrentPage(1);
+//  setPageContentItems(new_lesson_content_arr);
+}
 
 
 // current page data use in useState
@@ -39,15 +47,18 @@ TODO
 
 
 useEffect(() => {
-setTotalPages(data.pages);
-setLessonTitle(data.plate_name);
-// setCurrentPage(5)
+    setDataToStore();
+// setTotalPages(data.pages);
+// setLessonTitle(data.plate_name);
+//  setCurrentPage(1);
+//  setPageContentItems(new_lesson_content_arr);
 
 }, [])
 
     return (
     <>
     <LessonHeader />
+    <PageContent />
     </>
        
        
