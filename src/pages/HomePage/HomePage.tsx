@@ -16,6 +16,8 @@ import { useEffect, useState } from 'react';
 // const HomePage = (props: Props) => {
 
 const HomePage = () => {
+
+    const apiUrl = import.meta.env.VITE_API_URL;
   const [userId, setUserId] = useState<any>('');
  // const query = new URLSearchParams(location.search);
   //  const user_id = query.get('user_id')
