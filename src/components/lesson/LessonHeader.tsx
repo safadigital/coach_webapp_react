@@ -7,14 +7,14 @@ import NewStep from './NewStep';
 
 const LessonHeader = () => {
 
-    const { currentPage, totalPages } = useStore();
+    const { currentPage, totalPages, lessonTitle } = useStore();
 
     return (
         <>
            <header>
 
     <div className="visible sm:invisible flex justify-center w-full pt-[13px]">
-<p className="font-bold new_york_medium_font text-[18px]">Getting to know your body</p>
+<p className="font-bold new_york_medium_font text-[18px]">{lessonTitle}</p>
     </div>
 
     <div className="visible sm:invisible flex justify-between pl-5 pr-5">
