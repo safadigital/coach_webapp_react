@@ -20,11 +20,11 @@ export default defineConfig({
            changeOrigin: true,
            rewrite: (path) => path.replace(/^\/api/, ''),
            
-           configure: (proxy, options) => {
+           configure: (proxy) => {
               proxy.on('error', (err, _req, _res) => {
                console.log('error', err);
               });
-              proxy.on('proxyReq', (proxyReq, req, _res) => {
+              proxy.on('proxyReq', (req: any, _res) => {
                console.log('Request sent to target:', req.method, req.url);
               });
               proxy.on('proxyRes', (proxyRes, req, _res) => {

@@ -10,21 +10,31 @@ import axios from 'axios';
 // fake data
 // import data from '../../mock_data/daily_plan.json';
 import { useEffect, useState } from 'react';
-// import { useParams } from 'react-router-dom';
+ import { useLocation, useParams } from 'react-router-dom';
 //interface Props {}
 
 // const HomePage = (props: Props) => {
 
 const HomePage = () => {
+  const [userId, setUserId] = useState<any>('');
+ // const query = new URLSearchParams(location.search);
+  //  const user_id = query.get('user_id')
 
-  const query = new URLSearchParams(location.search);
-    const user_id = query.get('user_id')
-    console.log("user id from user: ", user_id)
+  function getUserId() {
+let user_id = useLocation();
+console.log("user id is: ", user_id)
+return user_id;
 
-    const [userId, setUserId] = useState('');
+  }
+  getUserId();
+ //   console.log("user id from user: ", user_id)
+  
+  
    
 
   //  console.log("params from user: ", params);
+
+    const [isLoading, setIsLoading] = useState(false);
 
     const [data, setData] = useState<any>({});
 
@@ -62,13 +72,12 @@ console.log("DATA FROM SERVER: ", data)
 
 
     useEffect(() => {
-         if (user_id) {
-        setUserId(user_id);
-    } else {
-        setUserId("ios_p1W7YHzv2DblPDIYNUWGuV8A5s02");
-    }
-
-axios.get(`/api/v1/daily_plan/v3/?user_id=${userId}`, {
+        const baseurl = "/api/v1/daily_plan/v3/?user_id=";
+  // const baseurl = "https://content.the.coach/api/v1/daily_plan/v3/?user_id=";
+        
+// setUserId(getUserId());
+setIsLoading(true);
+axios.get(`${baseurl}${userId}`, {
     headers: {
         'Access-Control-Allow-Origin': '*',
       'Content-Type': 'application/json',
@@ -92,14 +101,24 @@ axios.get(`/api/v1/daily_plan/v3/?user_id=${userId}`, {
     setDayInProgram(response.data?.plan[0]?.day_in_program);
     setProgress(response.data?.progress);
 
+    setIsLoading(false);
+
 })
 .catch(error => {
     console.error('Error:', error);
 });
-    }, [user_id])
+    }, [])
 
-
-    return (
+    { 
+        
+        if (isLoading === true) {
+return (<>
+<div className='w-full h-full flex items-center justify-center'>
+<h1>Loading</h1>
+</div>
+</>) 
+        } else {
+               return (
         <>
          <header className="visible sm:invisible lg:invisible flex items-center justify-between pr-5 pl-5 pt-5">
         <div className="flex-column">
@@ -191,6 +210,13 @@ practiceLessons.map((lesson: any, idx: number) => (
       
         </>
     )
+        }
+       
+
+     }
+
+
+     
 
 }
 

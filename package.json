@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.3",
   "type": "module",
+  "proxy": "https://content.the.coach",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
