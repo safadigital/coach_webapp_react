@@ -9,10 +9,13 @@ const LessonPage = () => {
 console.log("Lesson data: ", data);
 
 // const { totalPages, setTotalPages, currentPage, setCurrentPage } = useStore();
-const {  setTotalPages, setCurrentPage, setLessonTitle, currentPage } = useStore();
+const {  setTotalPages, setCurrentPage, setLessonTitle, currentPage, setPageContentItems } = useStore();
 // data from lesson in zustand
 
-getLessonContent(data.freetext_content, data.image_content, data.quiz_content, data.rating_content, data.text_content, data.video_content, currentPage);
+const new_lesson_content_arr = getLessonContent(data.freetext_content, data.image_content, data.quiz_content, data.rating_content, data.text_content, data.video_content, currentPage);
+
+setPageContentItems(new_lesson_content_arr);
+
 
 // current page data use in useState
 

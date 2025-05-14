@@ -48,6 +48,9 @@ interface ITimelineStore {
   lessonTitle: string;
   setLessonTitle: (state: string) => void;
 
+  pageContentItems: any[];
+  setPageContentItems: (state: any[]) => void;
+
 
 }
 
@@ -55,6 +58,7 @@ const useStore = create<ITimelineStore>((set) => ({
   totalPages: 0,
   currentPage: 1,
   lessonTitle: "",
+  pageContentItems: [],
   isPlayNavigationShown: false,
   isVideoPlaying: false,
   isAudioMuted: false,
@@ -80,6 +84,12 @@ const useStore = create<ITimelineStore>((set) => ({
   transitionsMap: {},
   trackItemsMap: {},
 
+
+
+   setPageContentItems: (state: any[]) =>
+    set(() => ({
+      pageContentItems: state
+    })),
 
   setLessonTitle: (state: string) =>
     set(() => ({
