@@ -18,7 +18,7 @@ const LessonHeader = () => {
     </div>
 
     <div className="visible sm:invisible flex justify-between pl-5 pr-5">
-        <img className="w-[32px] h-[32px]" src={prevIcon} alt="" />
+        <img className="w-[32px] h-[32px] cursor-pointer" src={prevIcon} alt="" />
         <div className="flex items-center justify-center w-full">
       
 
