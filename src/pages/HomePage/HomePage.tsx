@@ -10,25 +10,34 @@ import axios from 'axios';
 // fake data
 // import data from '../../mock_data/daily_plan.json';
 import { useEffect, useState } from 'react';
- import { useLocation, useParams } from 'react-router-dom';
+ import { useLocation } from 'react-router-dom';
 //interface Props {}
 
 // const HomePage = (props: Props) => {
 
 const HomePage = () => {
 
-    const apiUrl = import.meta.env.VITE_API_URL;
-  const [userId, setUserId] = useState<any>('');
+    const [userId, setUserId] = useState("ios_p1W7YHzv2DblPDIYNUWGuV8A5s02");
+
+    let user_id = "ios_p1W7YHzv2DblPDIYNUWGuV8A5s02";
+  
+  
+
+   // console.log("QUERY FROM LOCATION: ", loc.search.split("=")[1]);
+
+  //  const apiUrl = import.meta.env.VITE_API_URL;
+//  const [userId, setUserId] = useState<any>('');
  // const query = new URLSearchParams(location.search);
   //  const user_id = query.get('user_id')
 
-  function getUserId() {
-let user_id = useLocation();
-console.log("user id is: ", user_id)
-return user_id;
+//   function getUserId() {
+// let user_id = useLocation();
+// console.log("user id is: ", user_id)
+// setUserId("");
+// return user_id;
 
-  }
-  getUserId();
+//   }
+ // getUserId();
  //   console.log("user id from user: ", user_id)
   
   
@@ -52,6 +61,8 @@ return user_id;
    // console.log(data.plan[0]);
 
 console.log("DATA FROM SERVER: ", data)
+
+ const loc: any = useLocation();
 // console.log(lessons)
     // const headline = data?.plan[0]?.headline;
     // const lessons = data?.plan[0]?.questions;
@@ -79,6 +90,13 @@ console.log("DATA FROM SERVER: ", data)
         
 // setUserId(getUserId());
 setIsLoading(true);
+
+ 
+    if (loc != undefined) {
+ user_id = loc.search.split("=")[1];
+ setUserId(user_id);
+    }
+
 axios.get(`${baseurl}${userId}`, {
     headers: {
         'Access-Control-Allow-Origin': '*',
