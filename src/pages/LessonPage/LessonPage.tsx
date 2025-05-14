@@ -8,14 +8,16 @@ const LessonPage = () => {
 console.log("Lesson data: ", data);
 
 // const { totalPages, setTotalPages, currentPage, setCurrentPage } = useStore();
-const {  setTotalPages } = useStore();
+const {  setTotalPages, setCurrentPage } = useStore();
 // data from lesson in zustand
 
 // current page data use in useState
 
 
 useEffect(() => {
-setTotalPages(2);
+setTotalPages(data.pages);
+// setCurrentPage(5)
+
 }, [])
 
     return (
