@@ -106,7 +106,7 @@ axios.get(`${baseurl}${userId}`, {
       'Content-Type': 'application/json',
         'User-Agent': 'android',
         'AppVersion': '1.18.2',
-        'Authorization': 'Token Testoster0ne!',
+        'Authorization': `Token ${import.meta.env.VITE_API_TOKEN}`,
        
     }
 })
