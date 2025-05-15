@@ -80,15 +80,61 @@
     margin-bottom: 15% !important;
 }
 
+/* for mobiles */
+@media(max-width: 560px) {
+
+    .desktop-navigation {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+}
 
 /* for desktop screens */
+@media(min-width: 561px) {
+.broad_desktop {
+padding-left: 25%;
+padding-right: 25%;
+}
+
+.desktop-navigation {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+}
+
 @media(min-width: 920px) {
 .broad_desktop {
 padding-left: 25%;
 padding-right: 25%;
 }
+
+.desktop-navigation {
+    margin-left: 30%;
+    margin-right: 30%;
 }
 
+}
+@media(min-width: 1100px) {
+.broad_desktop {
+padding-left: 36%;
+padding-right: 36%;
+}
+
+.desktop-navigation {
+    width: 100%;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+
+}
+
+.lesson-img {
+/* display: flex;
+margin-left: 10%;
+margin-right: 10%; */
+}
 
 /* progress bar global styles */
 progress[value] {

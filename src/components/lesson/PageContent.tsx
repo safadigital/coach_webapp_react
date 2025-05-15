@@ -45,10 +45,10 @@ const video = lessonData.video_content ? lessonData.video_content : [];
                 return <h3 key={idx} className="text-[#FF6D03] sp_pro_text_medium_font text-[14px] font-bold tracking-[6%] uppercase">{item.text}</h3>
             }
              if (item.content_type == 'video') {
-                return <div key={idx}> 
+                return <div key={idx} className=""> 
 
 <Link to={`/player?video_id=${item.content_id}`}>
-                    <svg width="100%"  viewBox="0 0 1000 1000"
+                    <svg className="" width="100%" height='auto'  viewBox="0 0 1000 1000"
  xmlns="http://www.w3.org/2000/svg" 
  xmlnsXlink="http://www.w3.org/1999/xlink">
     <image xlinkHref={item.preview_url} x="0" y="0" height="1000" width="1000" />
