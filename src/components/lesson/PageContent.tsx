@@ -16,7 +16,7 @@ interface PageContentProps {
 
 const PageContent: React.FC<PageContentProps> = ({ lesson_data }) => {
 
-    const { currentPage } = useStore();
+    const { currentPage, setCurrentPage } = useStore();
 
 // console.log("Whole lesson data from store: ", lessonData);
 
@@ -41,10 +41,10 @@ const video = lessonData.video_content ? lessonData.video_content : [];
       {
         pageContentItems && pageContentItems.map((item: any, idx: number) => {
             if (item.content_type == 'section') {
-                return <h3 className="text-[#FF6D03] sp_pro_text_medium_font text-[14px] font-bold tracking-[6%] uppercase">{item.text}</h3>
+                return <h3 key={idx} className="text-[#FF6D03] sp_pro_text_medium_font text-[14px] font-bold tracking-[6%] uppercase">{item.text}</h3>
             }
              if (item.content_type == 'video') {
-                return <div> 
+                return <div key={idx}> 
 
 <Link to={`/player?video_id=${item.content_id}`}>
                     <svg width="100%"  viewBox="0 0 1000 1000"
@@ -61,17 +61,19 @@ const video = lessonData.video_content ? lessonData.video_content : [];
     </div></div>
             }
             if (item.content_type == 'normal_text') {
-                return <p className="new_york_medium_font text-[16px] pb-[16px]">{item.text}</p>
+                return <p key={idx} className="new_york_medium_font text-[16px] pb-[16px]">{item.text}</p>
             }
             if (item.content_type == 'header') {
-                return <h1 className="page_h1 new_york_heavy_font pb-[16px] tracking-[-2%] text-[24px]">{item.text}</h1>
+                return <h1 key={idx} className="page_h1 new_york_heavy_font pb-[16px] tracking-[-2%] text-[24px]">{item.text}</h1>
             }
 
         })
       }
         </div>
 
-        <button className="visible sm:invisible bg-[#141D19] text-[#fff] text-[14px] sp_pro_text_medium_font font-bold mr-5 ml-5 pl-5 pr-5 mt-20 mb-5 w-[90%] pt-[18px] pb-[18px] uppercase cursor-pointer">Continue</button>
+        <button
+        onClick={() => setCurrentPage(currentPage + 1)}
+        className="visible sm:invisible bg-[#141D19] text-[#fff] text-[14px] sp_pro_text_medium_font font-bold mr-5 ml-5 pl-5 pr-5 mt-20 mb-5 w-[90%] pt-[18px] pb-[18px] uppercase cursor-pointer">Continue</button>
         </>
     )
 
