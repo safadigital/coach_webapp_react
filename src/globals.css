@@ -80,6 +80,16 @@
     margin-bottom: 15% !important;
 }
 
+
+/* for desktop screens */
+@media(min-width: 920px) {
+.broad_desktop {
+padding-left: 25%;
+padding-right: 25%;
+}
+}
+
+
 /* progress bar global styles */
 progress[value] {
   background-color: #2B3330;

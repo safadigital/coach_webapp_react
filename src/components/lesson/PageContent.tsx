@@ -35,7 +35,7 @@ const video = lessonData.video_content ? lessonData.video_content : [];
 
     return (
         <>
-        <div className="visible sm:invisible flex-column  pl-5 pr-5 pt-20 pb-20 overflow-y-auto low ">
+        <div className="visible broad_desktop flex-column  pl-5 pr-5 pt-20 pb-20 overflow-y-auto low ">
 
       
       {
@@ -72,12 +72,12 @@ const video = lessonData.video_content ? lessonData.video_content : [];
         </div>
 
 {
-    currentPage < lessonData.pages ?  <div className="bg-[#fff] w-full fixed bottom-0 pt-10 pb-5"> <button
+    currentPage < lessonData.pages ?  <div className="bg-[#fff] w-full fixed bottom-0 pt-10 pb-5 broad_desktop"> <button
         onClick={() => {
             setCurrentPage(currentPage + 1); 
             window.scrollTo(0, 0); 
         }}
-        className=" visible sm:invisible bg-[#141D19] text-[#fff] text-[14px] sp_pro_text_medium_font font-bold mr-5 ml-5 pl-5 pr-5  mb-5 w-[90%] pt-[18px] pb-[18px] uppercase cursor-pointer">Continue</button></div> : <div></div>
+        className=" visible bg-[#141D19] text-[#fff] text-[14px] sp_pro_text_medium_font font-bold mr-5 ml-5 pl-5 pr-5  mb-5 w-[90%] pt-[18px] pb-[18px] uppercase cursor-pointer">Continue</button></div> : <div></div>
 }
 
        

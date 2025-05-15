@@ -6,6 +6,7 @@ import useStore from '@/store/store';
 import FullStep from './FullStep';
 import NewStep from './NewStep';
 
+import { Link } from 'react-router-dom';
 
 interface LessonHeaderProps {
   lesson_data: any;
@@ -18,13 +19,13 @@ const LessonHeader: React.FC<LessonHeaderProps> = ({ lesson_data }) => {
 
     return (
         <>
-           <header className='fixed w-full bg-[#fff] h-20'>
+           <header className='broad_desktop fixed w-full bg-[#fff] h-20'>
 
-    <div className="visible sm:invisible flex justify-center w-full">
+    <div className="visible flex justify-center w-full">
 <p className="font-bold new_york_medium_font text-[18px] ">{lessonData.plate_name}</p>
     </div>
 
-    <div className="visible sm:invisible flex justify-between pl-5 pr-5">
+    <div className="visible flex justify-between pl-5 pr-5">
         <img
         onClick={() => {
             if (currentPage > 1) {
@@ -50,13 +51,14 @@ const LessonHeader: React.FC<LessonHeaderProps> = ({ lesson_data }) => {
             
           
         </div>
-        <img className="w-[32px] h-[32px]" src={closeIcon} alt="" />
-
+        <Link to={`/`}>
+        <img className="w-[32px] h-[32px] cursor-pointer" src={closeIcon} alt="" />
+        </Link>
       
           
     </div>
 
-    <hr className="visible sm:invisible text-gray-200" />
+    <hr className="visible text-gray-200" />
 </header>
         </>
     )
