@@ -1,20 +1,20 @@
-import { useEffect, useState, FC } from 'react';
-import axios from 'axios';
+import { useEffect, useState } from 'react';
+// import axios from 'axios';
  import thedata from '../../mock_data/lesson_data.json';
-import useStore from '@/store/store';
+// import useStore from '@/store/store';
 import LessonHeader from '@/components/lesson/LessonHeader';
-import { getLessonContent } from '@/utils/lesson_content';
+// import { getLessonContent } from '@/utils/lesson_content';
 import PageContent from '@/components/lesson/PageContent';
 
-import { useLocation } from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 
 
 const LessonPage = () => {
 
-    const [isLoading, setIsLoading] = useState(false);
-    const [data, setData] = useState<any>(thedata);
+ //   const [isLoading, setIsLoading] = useState(false);
+    const [data] = useState<any>(thedata);
 
-    const loc = useLocation();
+  //  const loc = useLocation();
 
 
 // const { totalPages, setTotalPages, currentPage, setCurrentPage } = useStore();

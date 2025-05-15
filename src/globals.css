@@ -72,6 +72,14 @@
 }
 
 
+/* body {
+    padding-top: 50px;
+} */
+
+.low {
+    margin-bottom: 15% !important;
+}
+
 /* progress bar global styles */
 progress[value] {
   background-color: #2B3330;

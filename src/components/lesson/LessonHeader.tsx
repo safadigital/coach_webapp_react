@@ -18,10 +18,10 @@ const LessonHeader: React.FC<LessonHeaderProps> = ({ lesson_data }) => {
 
     return (
         <>
-           <header>
+           <header className='fixed w-full bg-[#fff] h-20'>
 
-    <div className="visible sm:invisible flex justify-center w-full pt-[13px]">
-<p className="font-bold new_york_medium_font text-[18px]">{lessonData.plate_name}</p>
+    <div className="visible sm:invisible flex justify-center w-full">
+<p className="font-bold new_york_medium_font text-[18px] ">{lessonData.plate_name}</p>
     </div>
 
     <div className="visible sm:invisible flex justify-between pl-5 pr-5">
