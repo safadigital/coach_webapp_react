@@ -6,13 +6,14 @@ import useStore from '@/store/store';
 import FullStep from './FullStep';
 import NewStep from './NewStep';
 
+
 interface LessonHeaderProps {
   lesson_data: any;
 }
 
 const LessonHeader: React.FC<LessonHeaderProps> = ({ lesson_data }) => {
 
-    const { currentPage } = useStore();
+    const { currentPage, setCurrentPage } = useStore();
     const lessonData = lesson_data;
 
     return (
@@ -24,7 +25,9 @@ const LessonHeader: React.FC<LessonHeaderProps> = ({ lesson_data }) => {
     </div>
 
     <div className="visible sm:invisible flex justify-between pl-5 pr-5">
-        <img className="w-[32px] h-[32px] cursor-pointer" src={prevIcon} alt="" />
+        <img
+         onClick={() => setCurrentPage(currentPage - 1)}
+        className="w-[32px] h-[32px] cursor-pointer" src={prevIcon} alt="" />
         <div className="flex items-center justify-center w-full">
       
 

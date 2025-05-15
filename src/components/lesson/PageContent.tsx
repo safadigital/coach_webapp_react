@@ -71,9 +71,14 @@ const video = lessonData.video_content ? lessonData.video_content : [];
       }
         </div>
 
-        <button
+{
+    currentPage < lessonData.pages ?  <button
         onClick={() => setCurrentPage(currentPage + 1)}
-        className="visible sm:invisible bg-[#141D19] text-[#fff] text-[14px] sp_pro_text_medium_font font-bold mr-5 ml-5 pl-5 pr-5 mt-20 mb-5 w-[90%] pt-[18px] pb-[18px] uppercase cursor-pointer">Continue</button>
+        className="visible sm:invisible bg-[#141D19] text-[#fff] text-[14px] sp_pro_text_medium_font font-bold mr-5 ml-5 pl-5 pr-5 mt-10 mb-5 w-[90%] pt-[18px] pb-[18px] uppercase cursor-pointer">Continue</button> : <div></div>
+}
+
+       
+
         </>
     )
 
