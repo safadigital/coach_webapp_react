@@ -3,6 +3,8 @@ import { getLessonContent } from "@/utils/lesson_content";
 
 import playIcon from '../../assets/play_button.svg';
 
+import { Link } from "react-router-dom";
+
 // mock data
 import lessonData from '../../mock_data/lesson_data.json';
 
@@ -18,7 +20,7 @@ console.log("Whole lesson data from store: ", lessonData);
 
     return (
         <>
-        <div className="visible sm:invisible flex-column gap-[16px] pl-5 pr-5 pt-10">
+        <div className="visible sm:invisible flex-column  pl-5 pr-5 pt-10">
 
       
       {
@@ -29,17 +31,14 @@ console.log("Whole lesson data from store: ", lessonData);
              if (item.content_type == 'video') {
                 return <div> 
 
-                    <svg width="100%" height="100%" viewBox="0 0 1000 1000"
+<Link to={`/player?video_id=${item.content_id}`}>
+                    <svg width="100%"  viewBox="0 0 1000 1000"
  xmlns="http://www.w3.org/2000/svg" 
  xmlnsXlink="http://www.w3.org/1999/xlink">
     <image xlinkHref={item.preview_url} x="0" y="0" height="1000" width="1000" />
     <image className="cursor-pointer" xlinkHref={playIcon} x="40%" y="40%" height="200" width="200" />    
 </svg>
-
-{/* <div className={'main-video'}>
-    <img className="w-full imgVideo" src={item.preview_url} alt="" />
-    <img className="playIcon" src={playIcon} alt="" />
-    </div> */}
+</Link>
 
     <div className="w-full bg-[#F1ECE9] pb-2">
         <p className="pl-2 pt-2 text-[16px] font-bold sp_pro_text_medium_font">{item.video_name}</p>

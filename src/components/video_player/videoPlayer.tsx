@@ -6,7 +6,7 @@ import {
   dispatch
 } from "@designcombo/events";
 // import { Button } from "./components/ui/button";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Timeline from "../../components/timeline";
 import { generateId } from "@designcombo/timeline";
 // import { DEFAULT_FONT } from "./constants/font";
@@ -15,9 +15,27 @@ import useStore from "../../store/store";
 import useTimelineEvents from "../../hooks/use-timeline-events";
 import PlayNavigation from "../../components/player/playnavigation";
 
+ import { useLocation } from 'react-router-dom';
+
 const VideoPlayer = () => {
-  const { playerRef } = useStore();
+  const { playerRef, lessonData } = useStore();
   useTimelineEvents();
+
+  const [videoId, setVideoId] = useState("");
+
+  const [videoItem, setVideoItem] = useState<any>({});
+
+console.log("lesson video content data in video player: ", lessonData.video_content);
+
+
+
+// get video id from location url
+ const loc: any = useLocation();
+
+ 
+
+// filter video item data from lessondata 
+
 
  const isPlayNavigationShown = useStore((state) => state.isPlayNavigationShown );
 
@@ -126,14 +144,17 @@ const VideoPlayer = () => {
 
   useEffect(() => {
 
-  function handleAddVideo() {
+     
+
+  function handleAddVideo(url: string) {
     const resourceId = "VMJQit9N0hJaCAss";
     dispatch(ADD_VIDEO, {
       payload: {
         id: generateId(),
         details: {
-          src: "https://res.cloudinary.com/the-coach/video/upload/v1681652731/BREATHING_PRACTICE_hpdspx.mp4",
-          volume: 50
+          // src: "https://res.cloudinary.com/the-coach/video/upload/v1681652731/BREATHING_PRACTICE_hpdspx.mp4",
+             src: url,
+          volume: 100
         },
         metadata: {
           resourceId
@@ -142,15 +163,32 @@ const VideoPlayer = () => {
     });
   };
 
-  const setVideo = () => {
+  const setVideo = (url: string) => {
     setTimeout(() => {
-handleAddVideo();
+handleAddVideo(url);
     }, 0)
  
   }
 
-  setVideo();
 
+    if (loc != undefined) {
+ let video_id = loc.search.split("=")[1];
+  console.log("Inputted video id: ", video_id);
+ 
+ setVideoId(video_id);
+  console.log('Saved video id from user: ', videoId);
+
+ // get video item from 
+ const video_item = lessonData?.video_content.filter((item: any) => item.content_id === video_id);
+
+ console.log("VIdeo item dara from server: ", video_item[0]);
+// "https://res.cloudinary.com/the-coach/video/upload/v1681652731/BREATHING_PRACTICE_hpdspx.mp4"
+
+ setVideoItem(video_item);
+  console.log('Saved video item from user: ', videoItem);
+   setVideo(video_item[0].video_url);
+
+    }
    
   }, [])
 
