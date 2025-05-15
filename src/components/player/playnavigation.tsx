@@ -37,17 +37,26 @@ import useStore from "@/store/store";
 // } from "../utils/timeline";
 import { useCurrentPlayerFrame } from "@/hooks/use-current-frame";
 
-import { useEffect } from "react";
+import { useEffect, FC } from "react";
 // import useUpdateAnsestors from "@/hooks/use-update-unsestors";
 // mport { ITimelineScaleState } from "@designcombo/types";
 
 import { frameToTimeString, timeToString } from "@/utils/time";
 
-const PlayNavigation = () => {
+import { useNavigate } from 'react-router-dom';
+
+
+interface PlayNavigationProps {
+  video_item: any;
+}
+
+const PlayNavigation: FC<PlayNavigationProps> = ({ video_item }) => {
  // const [playing, setPlaying] = useState(false);
  // const { setState, duration, fps, scale, playerRef, activeIds } = useStore();
 //  const { setState, duration, playerRef } = useStore();
- const { playerRef, fps, duration, isAudioMuted, setIsAudioMuted, isVideoPlaying, setIsVideoPlaying } = useStore();
+ const { playerRef, fps, duration, isAudioMuted, setIsAudioMuted, isVideoPlaying, setIsVideoPlaying, setActiveIds, setTrackItemIds, setTracks, setTrackItemsMap } = useStore();
+
+ const navigate = useNavigate();
 
 
 
@@ -163,14 +172,24 @@ const percentage_video = Math.floor(((currentFrame / fps) / (duration / 1000)) *
 <div className='w-[100%] h-[100%] top-[0%] fixed bg-black bg-opacity-70'>
 <div className='ml-5 mr-5'>
 
-  <div className='visible sm:invisible top-[2%] fixed flex w-[40px] h-[40px] bg-[#141D19] items-center justify-center rounded-full cursor-pointer'>
+{/* <Link to={'/lesson'} > */}
+  <div
+  onClick={() => {
+    setTracks([]);
+    setTrackItemIds([]);
+    setTrackItemsMap({});
+    setActiveIds([]);
+    navigate('/lesson');
+  }}
+  className='visible sm:invisible top-[2%] fixed flex w-[40px] h-[40px] bg-[#141D19] items-center justify-center rounded-full cursor-pointer'>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-4 text-[#fff] font-bold">
   <path fillRule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clipRule="evenodd" />
 </svg>
   </div>
+  {/* </Link> */}
 
   <div className='visible sm:invisible bottom-[35%] fixed flex w-[90%] text-[#FFF] font-bold text-[18px] new_york_medium_font'>
-    Meditation, breath-work, and mindfulness exercises
+    {video_item.video_name}
   </div>
 
 <div className='visible sm:invisible bottom-[30%] fixed flex h-1 w-full text-[#B4B7B5] font-bold text-[16px] new_york_medium_font '>

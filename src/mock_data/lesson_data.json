@@ -1,70 +1,20 @@
 {
    "Platform" : "iOS,Android",
    "freetext_content" : [],
-   "image_content" : [
-      {
-         "Platform" : "iOS,Android",
-         "content_id" : "inner_coach_three_columns_2",
-         "content_order" : 2,
-         "content_type" : "img_landscape",
-         "img_url" : "https://res.cloudinary.com/the-coach/image/upload/v1681770527/three_columns_er4vry.jpg",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_three_columns_2",
-         "page_order" : 8
-      }
-   ],
+   "image_content" : [],
    "is_complete" : false,
-   "lesson_id" : "inner_coach",
-   "module_id" : "anxiety",
-   "pages" : 8,
-   "plate_description" : "Confront your inner critic",
-   "plate_id" : "inner_coach",
+   "lesson_id" : "relational_pressure",
+   "module_id" : "ed_sex_therapy",
+   "pages" : 10,
+   "plate_description" : "There might be relational causes",
+   "plate_id" : "relational_pressure",
    "plate_length" : "5 MIN",
-   "plate_name" : "Inner Coach",
-   "plate_orange_text" : "LESSON 6",
-   "plate_order" : 5,
+   "plate_name" : "Relational Pressure",
+   "plate_orange_text" : "LESSON 14",
+   "plate_order" : 3,
    "program_id" : "keep_it_hard",
    "progress" : 0,
-   "quiz_content" : [
-      {
-         "Platform" : "iOS,Android",
-         "content_id" : "inner_coach_check_in",
-         "content_order" : 3,
-         "content_type" : "quiz_basic",
-         "lesson_id" : "inner_coach",
-         "ordered_quiz_answers" : [
-            {
-               "answer" : "More relaxed",
-               "order" : 1
-            },
-            {
-               "answer" : "More conscious",
-               "order" : 2
-            },
-            {
-               "answer" : "More confident",
-               "order" : 3
-            },
-            {
-               "answer" : "Same",
-               "order" : 4
-            }
-         ],
-         "page_id" : "inner_coach_check_in",
-         "page_order" : 3,
-         "quiz_answer_1" : "More relaxed",
-         "quiz_answer_2" : "More conscious",
-         "quiz_answer_3" : "More confident",
-         "quiz_answer_4" : "Same",
-         "quiz_answers" : [
-            "More relaxed",
-            "More conscious",
-            "More confident",
-            "Same"
-         ],
-         "quiz_note" : "Saved"
-      }
-   ],
+   "quiz_content" : [],
    "rating_content" : [],
    "text_content" : [
       {
@@ -72,292 +22,332 @@
          "content_id" : "random_content_id",
          "content_order" : 1,
          "content_type" : "header",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_1",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure",
          "page_order" : 1,
-         "text" : "Inner coach concept"
+         "text" : "The Relational Components of ED"
       },
       {
          "Platform" : "iOS,Android",
          "content_id" : "random_content_id",
          "content_order" : 2,
-         "content_type" : "normal_text",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_1",
-         "page_order" : 1,
-         "text" : "Get ready to meet your inner coach, a powerful tool that stands in direct opposition to the inner critic. Inner coach will break down the harsh words and negative talk of your inner critic piece by piece, stopping it from affecting your sexual performance or confidence."
-      },
-      {
-         "Platform" : "iOS,Android",
-         "content_id" : "random_content_id",
-         "content_order" : 4,
          "content_type" : "section",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_1",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure",
          "page_order" : 1,
-         "text" : "AUDIO TRANSCRIPT"
-      },
-      {
-         "Platform" : "iOS,Android",
-         "content_id" : "random_content_id",
-         "content_order" : 5,
-         "content_type" : "normal_text",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_1",
-         "page_order" : 1,
-         "text" : "One of the inner coach's key strengths lies in its ability to silence the inner critic and provide you with the perfect arguments to shut it down. It can also give you a much-needed confidence boost whenever you need it, making it an invaluable tool for anyone struggling with self-doubt or anxiety.\nCreating and developing your inner coach stems from the compassionate-focused therapy approach, whi ch involves examining the root of your distress without judgment. While this process can be intense, the exercise we've selected is self-guided and less taxing than full CFT.\nWith the inner coach by your side, you can decrease self-criticism and increase self-kindness, leading to a newfound sense of freedom and ease in the bedroom. As a bonus, you may even notice a boost in confidence in other areas of your life.\nTo make the most of this exercise, you must visualize your inner coach with the same level of detail and intensity as your inner critic. Studies show that this level of vividness is crucial to facilitating psychological change and making lasting progress.\nJust remember, the inner critic may try to sabotage this exercise with negative self-talk, such as \"I'm not good at this\" or \"this is silly.\" But stay determined and give the exercise a chance, and you'll be amazed at the positive changes that can result.\n"
+         "text" : "VIDEO"
       },
       {
          "Platform" : "iOS,Android",
          "content_id" : "random_content_id",
          "content_order" : 1,
-         "content_type" : "section",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_2",
-         "page_order" : 2,
-         "text" : "PRACTICE"
-      },
-      {
-         "Platform" : "iOS,Android",
-         "content_id" : "random_content_id",
-         "content_order" : 2,
          "content_type" : "header",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_2",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_2",
          "page_order" : 2,
-         "text" : "Train your inner coach"
+         "text" : "Part 2"
       },
       {
          "Platform" : "iOS,Android",
          "content_id" : "random_content_id",
-         "content_order" : 3,
-         "content_type" : "normal_text",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_2",
-         "page_order" : 2,
-         "text" : "🕒 Repeat 1 time per week for 2 months minimum"
-      },
-      {
-         "Platform" : "iOS,Android",
-         "content_id" : "random_content_id",
-         "content_order" : 4,
-         "content_type" : "normal_text",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_2",
-         "page_order" : 2,
-         "text" : "Follow the instructions to experience an interaction between your inner critic and your inner coach."
-      },
-      {
-         "Platform" : "iOS,Android",
-         "content_id" : "random_content_id",
-         "content_order" : 6,
+         "content_order" : 2,
          "content_type" : "section",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_2",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_2",
          "page_order" : 2,
-         "text" : "AUDIO TRANSCRIPT"
-      },
-      {
-         "Platform" : "iOS,Android",
-         "content_id" : "random_content_id",
-         "content_order" : 7,
-         "content_type" : "normal_text",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_2",
-         "page_order" : 2,
-         "text" : "It's time to confront that inner voice of doubt and self-criticism that has been holding you back for so long. You've already taken steps to observe it and understand how it operates, but today we're going to take it a step further and overcome it once and for all.\n\nBegin by closing your eyes and taking a deep breath. Pay attention to the tension in your shoulders and allow yourself to release it. Imagine the muscles softening and loosening, spreading a wave of relaxation down your spine.\n\nNow, let your mind go blank and focus on your thoughts about the next time you have sex. What kind of worries or doubts come up? This is the moment when your inner critic is most likely to chime in with negative thoughts and self-criticism. Take a moment to let that voice take over, and observe what it has to say.\n\nBut don't let it win. In response, summon a powerful and kind voice - your inner coach - that knows how to counteract the critic's negativity with logic, humor, or positivity. Repeat this counterpoint to the critic, imagining it as the voice of someone you admire or respect.\n\nAs the critic argues back, allow your inner coach to respond with even more confidence and strength. Feel the warmth and glow of your coach's support spread through your body, making you feel stronger and more balanced. With practice, this inner coach will become an automatic and positive part of you, helping you overcome self-doubt and criticism whenever you need it.\n\nTake a moment to release any remaining tension in your shoulders and slowly open your eyes, feeling a sense of accomplishment and pride for confronting your inner critic and coming out on top. Well done!"
+         "text" : "VIDEO"
       },
       {
          "Platform" : "iOS,Android",
          "content_id" : "random_content_id",
          "content_order" : 1,
-         "content_type" : "section",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_check_in",
+         "content_type" : "header",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_3",
          "page_order" : 3,
-         "text" : "Check in"
+         "text" : "Part 3"
       },
       {
          "Platform" : "iOS,Android",
          "content_id" : "random_content_id",
          "content_order" : 2,
-         "content_type" : "header",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_check_in",
+         "content_type" : "section",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_3",
          "page_order" : 3,
-         "text" : "How do you feel right now?"
+         "text" : "VIDEO"
       },
       {
          "Platform" : "iOS,Android",
          "content_id" : "random_content_id",
          "content_order" : 1,
          "content_type" : "header",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_whats_now",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_4",
          "page_order" : 4,
-         "text" : "Ok, what’s now?"
+         "text" : "Part 4"
       },
       {
          "Platform" : "iOS,Android",
          "content_id" : "random_content_id",
          "content_order" : 2,
-         "content_type" : "normal_text",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_whats_now",
+         "content_type" : "section",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_4",
          "page_order" : 4,
-         "text" : "To strengthen your inner coach, it's important to use it frequently. Here are some situations where you can call on your inner coach instead of letting your inner critic take over:\n\nWhen you feel fight-or-flight sensations in bed\nWhen a date triggers negative thoughts and emotions\nWhen you're stressed at work\nWhen you're being self-critical around family or friends\nWhen you're trying something new and your inner critic tries to hold you back\n\nWhile it's unlikely that your inner critic will disappear entirely, that's okay. It comes from a protective place and can still be useful when it's not dominating your thoughts. A more controlled inner critic can help you identify areas where you need to make changes, such as taking time to relax before being intimate, choosing a different way to connect with your partner, or addressing any unresolved tension with someone.\n"
+         "text" : "VIDEO"
       },
       {
          "Platform" : "iOS,Android",
          "content_id" : "random_content_id",
          "content_order" : 1,
          "content_type" : "header",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_schedule",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_5",
          "page_order" : 5,
-         "text" : "Inner Coach exercise schedule"
+         "text" : "Part 5"
       },
       {
          "Platform" : "iOS,Android",
          "content_id" : "random_content_id",
          "content_order" : 2,
-         "content_type" : "normal_text",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_schedule",
+         "content_type" : "section",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_5",
          "page_order" : 5,
-         "text" : "Your inner coach is just starting to emerge. After months, years, or even decades of listening to your inner critic point out your fears and weaknesses, it's natural that your inner coach may need some time and practice to grow stronger.\n\nTry doing this exercise once a week for at least two months. Don't worry if progress isn't always steady; sometimes your inner critic will still dominate. But stay committed and keep practicing, and you'll see your inner coach start to gain strength over time."
+         "text" : "VIDEO"
       },
       {
          "Platform" : "iOS,Android",
          "content_id" : "random_content_id",
          "content_order" : 1,
          "content_type" : "header",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_develop",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_6",
          "page_order" : 6,
-         "text" : "Develop the healthy way of thinking"
+         "text" : "Part 6"
       },
       {
          "Platform" : "iOS,Android",
          "content_id" : "random_content_id",
          "content_order" : 2,
-         "content_type" : "normal_text",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_develop",
+         "content_type" : "section",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_6",
          "page_order" : 6,
-         "text" : "In this part we’ll introduce a very powerful technique from CBT called The Triple Column Technique. It will help you turn your inner dialogue from a critic to a coach and develop a more effective self-evaluation system.\nAs a result, it’ll allow you to have :\n- Fewer negative thoughts\n- Sex without being drawn into negative loops"
+         "text" : "VIDEO"
       },
       {
          "Platform" : "iOS,Android",
          "content_id" : "random_content_id",
          "content_order" : 1,
          "content_type" : "header",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_three_columns",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_7",
          "page_order" : 7,
-         "text" : "The Triple Column Technique"
+         "text" : "Part 7"
       },
       {
          "Platform" : "iOS,Android",
          "content_id" : "random_content_id",
          "content_order" : 2,
-         "content_type" : "normal_text",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_three_columns",
+         "content_type" : "section",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_7",
          "page_order" : 7,
-         "text" : "🕒 Repeat 1 time per week for 2 months minimum"
-      },
-      {
-         "Platform" : "iOS,Android",
-         "content_id" : "random_content_id",
-         "content_order" : 3,
-         "content_type" : "normal_text",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_three_columns",
-         "page_order" : 7,
-         "text" : "Step 1. Create the Triple Column Technique table.\n\n1) Draw two lines down the center of a piece of paper to divide it into thirds.\n2) Label the left-hand column “Automatic Thoughts (Self-criticism)\n3) Label the middle column “Cognitive Distortion”\n4) Label the right-hand column “ Rational Response (Self-defense)”\n\nStep 2. List your negative thoughts.\nIn the left-hand column, write down all the hurtful self-criticisms and negative thoughts you have before or during sex. Remember a recent negative sexual experience that stands out. For example, \"Last time I had sex, I couldn't get hard during foreplay.\"\nYou can start by writing down only 1 or 2 negative thoughts you had during this moment. For example, \"I can't believe this is happening again, I'm sick of it. I bet my partner was as disappointed as I was.\"\n\n\nStep 3. Identify cognitive distortions.\nIn the middle column, write down the cognitive distortions. Using the list of distorted thinking patterns, see if you can identify the thinking errors in each of your automatic negative thoughts. \n\n10 distorted thinking patterns:"
-      },
-      {
-         "Platform" : "iOS,Android",
-         "content_id" : "random_content_id",
-         "content_order" : 4,
-         "content_type" : "important_text",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_three_columns",
-         "page_order" : 7,
-         "text" : "1. All-Or-Nothing Thinking – You see things in black-and-white categories. If your performance falls short of perfect, you see yourself as a total failure.\n\n2. Overgeneralization – You see a single negative event as a never-ending pattern of defeat.\n\n3. Mental Filter – You pick out a single negative defeat and dwell on it exclusively so that your vision of reality becomes darkened, like the drop of ink that colors the entire beaker of water.\n\n4. Disqualifying the positive – You dismiss positive experiences by insisting they “don’t count” for some reason or other. In this way you can maintain a negative belief that is contradicted by your everyday experiences.\n\n5. Jumping to conclusions – You make a negative interpretation even though there are no definite facts that convincingly support your conclusion.\na) Mind reading. You arbitrarily conclude that someone is reacting negatively to you, and you don’t bother to check this out.\nb) The fortune teller error. You anticipate that things will turn out badly, and you feel convinced that your prediction is an already-established fact.\n\n6. Magnification (Catastrophizing) or Minimization– You exaggerate the importance of things (such as your mistake or someone else’s achievement), or you inappropriately shrink things until they appear tiny (your own desirable qualities or the other fellow’s imperfections). This is also called the “binocular trick.”\n\n7. Emotional Reasoning – You assume that your negative emotions necessarily reflect the way things really are: “I feel it, therefore it must be true.\n\n8. Should Statements – You try to motivate yourself with shoulds and shouldn’ts, as if you had to be punished before you could be expected to do anything. “Musts” and “oughts” are also offenders. The emotional consequence is guilt. When you direct should statements toward others, you feel anger, frustration, and resentment.\n\n9. Labeling and Mislabeling – This is an extreme form of overgeneralization. Instead of describing your error, you attach a negative label to yourself: “I’m a loser.” When someone else’s behavior rubs you the wrong way, you attach a negative label to him. Mislabeling involves describing an event with language that is highly colored and emotionally loaded.\n\n10. Personalization – You see yourself as the cause of some negative external event which in fact you were not primarily responsible for."
-      },
-      {
-         "Platform" : "iOS,Android",
-         "content_id" : "random_content_id",
-         "content_order" : 5,
-         "content_type" : "normal_text",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_three_columns",
-         "page_order" : 7,
-         "text" : "Step 4 – Identify rational thoughts.\nIn the right-hand column substitute a more rational, less upsetting thought. Don’t try to cheer yourself up by rationalizing or saying things you don’t objectively believe are valid. Instead, try to find an objective fact. Your response can take into account what was illogical or erroneous about your self-critical automatic thought."
+         "text" : "VIDEO"
       },
       {
          "Platform" : "iOS,Android",
          "content_id" : "random_content_id",
          "content_order" : 1,
          "content_type" : "header",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_three_columns_2",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_8",
          "page_order" : 8,
-         "text" : "Example"
+         "text" : "Part 8"
       },
       {
          "Platform" : "iOS,Android",
          "content_id" : "random_content_id",
-         "content_order" : 3,
+         "content_order" : 2,
+         "content_type" : "section",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_8",
+         "page_order" : 8,
+         "text" : "VIDEO"
+      },
+      {
+         "Platform" : "iOS,Android",
+         "content_id" : "random_content_id",
+         "content_order" : 1,
          "content_type" : "header",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_three_columns_2",
-         "page_order" : 8,
-         "text" : "Practice again and again"
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_9",
+         "page_order" : 9,
+         "text" : "Part 9"
       },
       {
          "Platform" : "iOS,Android",
          "content_id" : "random_content_id",
-         "content_order" : 4,
-         "content_type" : "normal_text",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_three_columns_2",
-         "page_order" : 8,
-         "text" : "The truth is you probably won't believe your new thought instantly.\nYou have to practice. You have to physically argue against your old way of thinking. It takes grit. It takes a commitment to being more rational."
+         "content_order" : 2,
+         "content_type" : "section",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_9",
+         "page_order" : 9,
+         "text" : "VIDEO"
+      },
+      {
+         "Platform" : "iOS,Android",
+         "content_id" : "random_content_id",
+         "content_order" : 1,
+         "content_type" : "header",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_10",
+         "page_order" : 10,
+         "text" : "Part 10"
+      },
+      {
+         "Platform" : "iOS,Android",
+         "content_id" : "random_content_id",
+         "content_order" : 2,
+         "content_type" : "section",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_10",
+         "page_order" : 10,
+         "text" : "VIDEO"
       }
    ],
    "video_content" : [
       {
          "Platform" : "iOS,Android",
-         "audio_player_pic" : "https://res.cloudinary.com/the-coach/image/upload/v1681994472/wave_ver1_papxbp.png",
-         "author" : "Audio 9",
-         "content_id" : "audio_inner_coach_concept",
+         "author" : "Natalie Goldberg",
+         "content_id" : "relational_pressure_2",
          "content_order" : 3,
-         "content_type" : "audio",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_1",
-         "page_order" : 1,
-         "preview_url" : "https://res.cloudinary.com/the-coach/image/upload/v1681994472/wave_ver1_papxbp.png",
-         "video_name" : "Inner Coach Concept",
-         "video_url" : "https://res.cloudinary.com/the-coach/video/upload/v1681752682/Audio%20for%20PE%20and%20ED%20Programs/module_2_8_inner_coach_ske11k.mp3"
+         "content_type" : "video",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_2",
+         "page_order" : 2,
+         "preview_url" : "https://res.cloudinary.com/the-coach/image/upload/v1681746201/expert_Natalie_faekxs.jpg",
+         "video_name" : "Relational Causes of ED #2",
+         "video_url" : "https://res.cloudinary.com/the-coach/video/upload/f_auto,q_auto/v1683028196/Video%20for%20PE%20and%20ED%20programs/relational_causes_2_xuvu94.mp4"
       },
       {
          "Platform" : "iOS,Android",
-         "audio_player_pic" : "https://res.cloudinary.com/the-coach/image/upload/v1681994472/wave_ver1_papxbp.png",
-         "author" : "Audio 10",
-         "content_id" : "audio_train_coach",
-         "content_order" : 5,
-         "content_type" : "audio",
-         "lesson_id" : "inner_coach",
-         "page_id" : "inner_coach_2",
-         "page_order" : 2,
-         "preview_url" : "https://res.cloudinary.com/the-coach/image/upload/v1681994472/wave_ver1_papxbp.png",
-         "video_name" : "Train Inner Coach",
-         "video_url" : "https://res.cloudinary.com/the-coach/video/upload/v1681755227/Audio%20for%20PE%20and%20ED%20Programs/module_2_9_train_inner_coach_enoafd.mp3"
+         "author" : "Natalie Goldberg",
+         "content_id" : "relational_pressure",
+         "content_order" : 3,
+         "content_type" : "video",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure",
+         "page_order" : 1,
+         "preview_url" : "https://res.cloudinary.com/the-coach/image/upload/v1681746201/expert_Natalie_faekxs.jpg",
+         "video_name" : "Relational Causes of ED #1",
+         "video_url" : "https://res.cloudinary.com/the-coach/video/upload/f_auto,q_auto/v1683028169/Video%20for%20PE%20and%20ED%20programs/relational_causes_1_bx8n9z.mp4"
+      },
+      {
+         "Platform" : "iOS,Android",
+         "author" : "Natalie Goldberg",
+         "content_id" : "relational_pressure_4",
+         "content_order" : 3,
+         "content_type" : "video",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_4",
+         "page_order" : 4,
+         "preview_url" : "https://res.cloudinary.com/the-coach/image/upload/v1681746201/expert_Natalie_faekxs.jpg",
+         "video_name" : "Relational Causes of ED #4",
+         "video_url" : "https://res.cloudinary.com/the-coach/video/upload/f_auto,q_auto/v1683028241/Video%20for%20PE%20and%20ED%20programs/relational_causes_4_e3maeu.mp4"
+      },
+      {
+         "Platform" : "iOS,Android",
+         "author" : "Natalie Goldberg",
+         "content_id" : "relational_pressure_3",
+         "content_order" : 3,
+         "content_type" : "video",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_3",
+         "page_order" : 3,
+         "preview_url" : "https://res.cloudinary.com/the-coach/image/upload/v1681746201/expert_Natalie_faekxs.jpg",
+         "video_name" : "Relational Causes of ED #3",
+         "video_url" : "https://res.cloudinary.com/the-coach/video/upload/f_auto,q_auto/v1683028249/Video%20for%20PE%20and%20ED%20programs/relational_causes_3_mkbvjo.mp4"
+      },
+      {
+         "Platform" : "iOS,Android",
+         "author" : "Natalie Goldberg",
+         "content_id" : "relational_pressure_5",
+         "content_order" : 3,
+         "content_type" : "video",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_5",
+         "page_order" : 5,
+         "preview_url" : "https://res.cloudinary.com/the-coach/image/upload/v1681746201/expert_Natalie_faekxs.jpg",
+         "video_name" : "Relational Causes of ED #5",
+         "video_url" : "https://res.cloudinary.com/the-coach/video/upload/f_auto,q_auto/v1683028240/Video%20for%20PE%20and%20ED%20programs/relational_causes_5_znrnky.mp4"
+      },
+      {
+         "Platform" : "iOS,Android",
+         "author" : "Natalie Goldberg",
+         "content_id" : "relational_pressure_6",
+         "content_order" : 3,
+         "content_type" : "video",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_6",
+         "page_order" : 6,
+         "preview_url" : "https://res.cloudinary.com/the-coach/image/upload/v1681746201/expert_Natalie_faekxs.jpg",
+         "video_name" : "Relational Causes of ED #6",
+         "video_url" : "https://res.cloudinary.com/the-coach/video/upload/f_auto,q_auto/v1683028223/Video%20for%20PE%20and%20ED%20programs/relational_causes_6_w5itn8.mp4"
+      },
+      {
+         "Platform" : "iOS,Android",
+         "author" : "Natalie Goldberg",
+         "content_id" : "relational_pressure_7",
+         "content_order" : 3,
+         "content_type" : "video",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_7",
+         "page_order" : 7,
+         "preview_url" : "https://res.cloudinary.com/the-coach/image/upload/v1681746201/expert_Natalie_faekxs.jpg",
+         "video_name" : "Relational Causes of ED #7",
+         "video_url" : "https://res.cloudinary.com/the-coach/video/upload/f_auto,q_auto/v1683028285/Video%20for%20PE%20and%20ED%20programs/relational_causes_7_ont1y6.mp4"
+      },
+      {
+         "Platform" : "iOS,Android",
+         "author" : "Natalie Goldberg",
+         "content_id" : "relational_pressure_8",
+         "content_order" : 3,
+         "content_type" : "video",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_8",
+         "page_order" : 8,
+         "preview_url" : "https://res.cloudinary.com/the-coach/image/upload/v1681746201/expert_Natalie_faekxs.jpg",
+         "video_name" : "Relational Causes of ED #8",
+         "video_url" : "https://res.cloudinary.com/the-coach/video/upload/f_auto,q_auto/v1683028237/Video%20for%20PE%20and%20ED%20programs/relational_causes_8_iyf6o8.mp4"
+      },
+      {
+         "Platform" : "iOS,Android",
+         "author" : "Natalie Goldberg",
+         "content_id" : "relational_pressure_10",
+         "content_order" : 3,
+         "content_type" : "video",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_10",
+         "page_order" : 10,
+         "preview_url" : "https://res.cloudinary.com/the-coach/image/upload/v1681746201/expert_Natalie_faekxs.jpg",
+         "video_name" : "Relational Causes of ED #10",
+         "video_url" : "https://res.cloudinary.com/the-coach/video/upload/f_auto,q_auto/v1683028238/Video%20for%20PE%20and%20ED%20programs/relational_causes_10_imk6vx.mp4"
+      },
+      {
+         "Platform" : "iOS,Android",
+         "author" : "Natalie Goldberg",
+         "content_id" : "relational_pressure_9",
+         "content_order" : 3,
+         "content_type" : "video",
+         "lesson_id" : "relational_pressure",
+         "page_id" : "relational_pressure_9",
+         "page_order" : 9,
+         "preview_url" : "https://res.cloudinary.com/the-coach/image/upload/v1681746201/expert_Natalie_faekxs.jpg",
+         "video_name" : "Relational Causes of ED #9",
+         "video_url" : "https://res.cloudinary.com/the-coach/video/upload/f_auto,q_auto/v1683028286/Video%20for%20PE%20and%20ED%20programs/relational_causes_9_ubhoie.mp4"
       }
    ]
 }
-
-

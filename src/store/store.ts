@@ -21,6 +21,12 @@ interface ITimelineStore {
   trackItemsMap: Record<string, ITrackItem>;
   activeIds: string[];
   timeline: CanvasTimeline | null;
+
+  setTracks: (tracks: ITrack[]) => void;
+  setTrackItemIds: (trackItemIds: string[]) => void;
+  setTrackItemsMap: (trackItemsMap: Record<string, ITrackItem>) => void;
+  setActiveIds: (activeIds: string[]) => void;
+
   setTimeline: (timeline: CanvasTimeline) => void;
   setScale: (scale: ITimelineScaleState) => void;
   setScroll: (scroll: ITimelineScrollState) => void;
@@ -88,6 +94,27 @@ const useStore = create<ITimelineStore>((set) => ({
   transitionsMap: {},
   trackItemsMap: {},
 
+
+
+   setTracks: (state: ITrack[]) =>
+    set(() => ({
+      tracks: state
+    })),
+
+     setTrackItemIds: (state: string[]) =>
+    set(() => ({
+      trackItemIds: state
+    })),
+
+     setActiveIds: (state: string[]) =>
+    set(() => ({
+      activeIds: state
+    })),
+
+    setTrackItemsMap: (state: Record<string, ITrackItem>) =>
+    set(() => ({
+      trackItemsMap: state
+    })),
 
  setLessonData: (state: any) =>
     set(() => ({

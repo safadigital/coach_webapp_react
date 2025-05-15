@@ -15,10 +15,17 @@ import useStore from "../../store/store";
 import useTimelineEvents from "../../hooks/use-timeline-events";
 import PlayNavigation from "../../components/player/playnavigation";
 
+import lessonData from '../../mock_data/lesson_data.json';
+
  import { useLocation } from 'react-router-dom';
 
+//  interface VideoPlayerProps {
+//   video_item: any;
+//  }
+
 const VideoPlayer = () => {
-  const { playerRef, lessonData } = useStore();
+//  const { playerRef, lessonData } = useStore();
+   const { playerRef } = useStore();
   useTimelineEvents();
 
   const [videoId, setVideoId] = useState("");
@@ -147,7 +154,7 @@ console.log("lesson video content data in video player: ", lessonData.video_cont
      
 
   function handleAddVideo(url: string) {
-    const resourceId = "VMJQit9N0hJaCAss";
+    const resourceId = generateId();
     dispatch(ADD_VIDEO, {
       payload: {
         id: generateId(),
@@ -230,7 +237,7 @@ handleAddVideo(url);
 
       </div>
 
- {playerRef && isPlayNavigationShown && <PlayNavigation />}
+ {playerRef && isPlayNavigationShown && <PlayNavigation video_item={videoItem} />}
 
       {playerRef && <Timeline />}
     </div>
