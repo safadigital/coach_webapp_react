@@ -7,6 +7,8 @@ import statusNext from '../../assets/status_next.svg';
 
 import axios from 'axios';
 
+import { Link } from 'react-router-dom';
+
 // fake data
 // import data from '../../mock_data/daily_plan.json';
 import { useEffect, useState } from 'react';
@@ -186,7 +188,9 @@ theoryLessons.map((lesson: any, idx: number) => (
     <div className="flex-column bottomrightrounded toprightrounded content-between bg-[#F3F4F4] pl-3 pr-[16px] pt-[16px] pb-[16px] bottom_shadow">
         <div className="flex flex-row w-full justify-between items-center">
             <p className="text-[16px] font-bold new_york_medium_font mr-1">{lesson.headline}</p>
+              <Link to={ lesson.completed ? "#" : `/lesson?lesson_id=${ lesson.link_type.coach_lesson ? lesson.link_type.coach_lesson.lesson_id :  lesson.link_type.coach_video.lesson_id}` }>
             <img className="w-[30px] h-[30px]" src={ lesson.completed ? statusDone : statusNext} alt="" />
+            </Link>
                 </div>
                 <div className="mttauto">
                     <p className="text-[10px] text-[#696E6C] uppercase font-bold sp_pro_text_medium_font wide">{lesson.description}</p>
@@ -218,7 +222,11 @@ practiceLessons.map((lesson: any, idx: number) => (
     <div className="flex-column bottomrightrounded toprightrounded content-between bg-[#F3F4F4] pl-3 pr-[16px] pt-[16px] pb-[16px] bottom_shadow">
         <div className="flex flex-row w-full justify-between items-center">
             <p className="text-[16px] font-bold new_york_medium_font mr-1">{lesson.headline}</p>
+
+            <Link to={ lesson.completed ? "#" : `/lesson?lesson_id=${ lesson.link_type.coach_lesson ? lesson.link_type.coach_lesson.lesson_id :  lesson.link_type.coach_video.lesson_id}` }>
             <img className="w-[30px] h-[30px]" src={ lesson.completed ? statusDone : statusNext} alt="" />
+            </Link>
+            
                 </div>
                 <div className="mttauto">
                     <p className="text-[10px] text-[#696E6C] uppercase font-bold sp_pro_text_medium_font wide">{lesson.description}</p>
