@@ -26,7 +26,13 @@ const LessonHeader: React.FC<LessonHeaderProps> = ({ lesson_data }) => {
 
     <div className="visible sm:invisible flex justify-between pl-5 pr-5">
         <img
-         onClick={() => setCurrentPage(currentPage - 1)}
+        onClick={() => {
+            if (currentPage > 1) {
+  setCurrentPage(currentPage - 1); 
+            window.scrollTo(0, 0); 
+            }
+          
+        }}
         className="w-[32px] h-[32px] cursor-pointer" src={prevIcon} alt="" />
         <div className="flex items-center justify-center w-full">
       
