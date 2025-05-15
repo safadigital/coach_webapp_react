@@ -4,7 +4,7 @@ import { getLessonContent } from "@/utils/lesson_content";
 
 import playIcon from '../../assets/play_button.svg';
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // mock data
 // import lessonData from '../../mock_data/lesson_data.json';
@@ -17,6 +17,7 @@ interface PageContentProps {
 const PageContent: React.FC<PageContentProps> = ({ lesson_data }) => {
 
     const { currentPage, setCurrentPage } = useStore();
+    const navigate = useNavigate();
 
 // console.log("Whole lesson data from store: ", lessonData);
 
@@ -78,6 +79,16 @@ const video = lessonData.video_content ? lessonData.video_content : [];
             window.scrollTo(0, 0); 
         }}
         className=" visible bg-[#141D19] text-[#fff] text-[14px] sp_pro_text_medium_font font-bold mr-5 ml-5 pl-5 pr-5  mb-5 w-[90%] pt-[18px] pb-[18px] uppercase cursor-pointer">Continue</button></div> : <div></div>
+}
+
+{
+    currentPage == lessonData.pages ?  <div className="bg-[#fff] w-full fixed bottom-0 pt-10 pb-5 broad_desktop"> <button
+        onClick={() => {
+            setCurrentPage(1); 
+            navigate('/');
+             
+        }}
+        className=" visible bg-[#141D19] text-[#fff] text-[14px] sp_pro_text_medium_font font-bold mr-5 ml-5 pl-5 pr-5  mb-5 w-[90%] pt-[18px] pb-[18px] uppercase cursor-pointer">Finish</button></div> : <div></div>
 }
 
        
