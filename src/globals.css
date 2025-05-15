@@ -272,3 +272,20 @@ border-radius: 4px;
     color: yellow;
 }
 
+
+.imgVideo {
+    display: block;
+    position: relative;
+}
+
+.playIcon {
+ display: block;
+width: 30%; /* это наверное уже у тебя в js будет вычисляться */
+position: absolute;
+top: 22%; left: 40%; 
+}
+
+.main-video {
+    display: block;
+    position: relative;
+}

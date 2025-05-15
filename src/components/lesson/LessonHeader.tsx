@@ -7,14 +7,14 @@ import NewStep from './NewStep';
 
 const LessonHeader = () => {
 
-    const { currentPage, totalPages, lessonTitle } = useStore();
+    const { currentPage, lessonData } = useStore();
 
     return (
         <>
            <header>
 
     <div className="visible sm:invisible flex justify-center w-full pt-[13px]">
-<p className="font-bold new_york_medium_font text-[18px]">{lessonTitle}</p>
+<p className="font-bold new_york_medium_font text-[18px]">{lessonData.plate_name}</p>
     </div>
 
     <div className="visible sm:invisible flex justify-between pl-5 pr-5">
@@ -24,7 +24,7 @@ const LessonHeader = () => {
 
         
              {
-             Array.from({ length: totalPages }, (_, index) => (
+             Array.from({ length: lessonData.pages }, (_, index) => (
                               index + 1 <= currentPage ? <FullStep key={index} /> : <NewStep key={index} />
              )
              
