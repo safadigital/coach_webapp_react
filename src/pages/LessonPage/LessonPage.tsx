@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, FC } from 'react';
 import axios from 'axios';
 // import data from '../../mock_data/lesson_data.json';
 import useStore from '@/store/store';
@@ -7,6 +7,7 @@ import { getLessonContent } from '@/utils/lesson_content';
 import PageContent from '@/components/lesson/PageContent';
 
 import { useLocation } from 'react-router-dom';
+
 
 const LessonPage = () => {
 
@@ -51,7 +52,7 @@ TODO
 
 useEffect(() => {
  //   setDataToStore();
-   const baseurl = "/api/v1/coachprogram/lessons/";
+   const baseurl = "/api//v1/coachprogram/lessons/";
 
    // https://content.the.coach/api/v1/coachprogram/lessons/body_scanning/
 
@@ -93,8 +94,8 @@ useEffect(() => {
 
     return (
     <>
-    <LessonHeader />
-    <PageContent />
+    <LessonHeader lesson_data={data}  />
+    <PageContent lesson_data={data} />
     </>
        
        

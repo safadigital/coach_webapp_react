@@ -1,3 +1,4 @@
+import React from 'react';
 import prevIcon from '../../assets/left_chevron.svg';
 import closeIcon from '../../assets/close.svg';
 
@@ -5,9 +6,14 @@ import useStore from '@/store/store';
 import FullStep from './FullStep';
 import NewStep from './NewStep';
 
-const LessonHeader = () => {
+interface LessonHeaderProps {
+  lesson_data: any;
+}
 
-    const { currentPage, lessonData } = useStore();
+const LessonHeader: React.FC<LessonHeaderProps> = ({ lesson_data }) => {
+
+    const { currentPage } = useStore();
+    const lessonData = lesson_data;
 
     return (
         <>

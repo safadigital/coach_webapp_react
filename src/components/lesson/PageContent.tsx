@@ -1,3 +1,4 @@
+import React from "react";
 import useStore from "@/store/store";
 import { getLessonContent } from "@/utils/lesson_content";
 
@@ -6,15 +7,29 @@ import playIcon from '../../assets/play_button.svg';
 import { Link } from "react-router-dom";
 
 // mock data
-import lessonData from '../../mock_data/lesson_data.json';
+// import lessonData from '../../mock_data/lesson_data.json';
 
-const PageContent = () => {
+interface PageContentProps {
+  lesson_data: any
+}
+
+
+const PageContent: React.FC<PageContentProps> = ({ lesson_data }) => {
 
     const { currentPage } = useStore();
 
-console.log("Whole lesson data from store: ", lessonData);
+// console.log("Whole lesson data from store: ", lessonData);
 
- const pageContentItems = getLessonContent(lessonData.freetext_content, lessonData.image_content, lessonData.quiz_content, lessonData.rating_content, lessonData.text_content, lessonData.video_content, currentPage);
+const lessonData = lesson_data;
+
+const freeText = lessonData.freetext_content ? lessonData.freetext_content : [];
+const image = lessonData.image_content ? lessonData.image_content : [];
+const quiz = lessonData.quiz_content ? lessonData.quiz_content : [];
+const rating = lessonData.rating_content ? lessonData.rating_content : [];
+const text = lessonData.text_content ? lessonData.text_content : [];
+const video = lessonData.video_content ? lessonData.video_content : [];
+
+ const pageContentItems = getLessonContent(freeText, image, quiz, rating, text, video, currentPage);
 
 // console.log(" PAGE CONTENT ITEMS ON CONTENT PAGE: ", pageContentItems);
 

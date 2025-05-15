@@ -24,25 +24,26 @@ export default defineConfig({
       //   // rewrite: (path) => path.replace(/^\/api/, ''),
       // },
 
- "/api": "https://content.the.coach",
+//  "/api": "https://content.the.coach",
+
 // "https://content.the.coach": "https://content.the.coach",
-    //    '/api': {
-    //        target: 'https://content.the.coach/api', 
-    //        changeOrigin: true,
-    //        rewrite: (path) => path.replace(/^\/api/, ''),
+       '/api': {
+           target: 'https://content.the.coach', 
+           changeOrigin: true,
+          // rewrite: (path) => path.replace(/^\/api/, ''),
            
-    //        configure: (proxy) => {
-    //           proxy.on('error', (err, _req, _res) => {
-    //            console.log('error', err);
-    //           });
-    //           proxy.on('proxyReq', (req: any, _res) => {
-    //            console.log('Request sent to target:', req.method, req.url);
-    //           });
-    //           proxy.on('proxyRes', (proxyRes, req, _res) => {
-    //            console.log('Response received from target:', proxyRes.statusCode, req.url);
-    //           });
-    //     },
-    // }
+           configure: (proxy) => {
+              proxy.on('error', (err, _req, _res) => {
+               console.log('error', err);
+              });
+              proxy.on('proxyReq', (req: any, _res) => {
+               console.log('Request sent to target:', req.method, req.url);
+              });
+              proxy.on('proxyRes', (proxyRes, req, _res) => {
+               console.log('Response received from target:', proxyRes.statusCode, req.url);
+              });
+        },
+    }
   },
   
   // build: {
