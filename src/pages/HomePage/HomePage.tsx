@@ -87,8 +87,8 @@ console.log("DATA FROM SERVER: ", data)
 
 
     useEffect(() => {
-        const baseurl = "/api/v1/daily_plan/v3/?user_id=";
-  // const baseurl = "https://content.the.coach/api/v1/daily_plan/v3/?user_id=";
+        const baseurl = '/api/v1/daily_plan/v3/?user_id=';
+ //  const baseurl = "https://content.the.coach/api/v1/daily_plan/v3/?user_id=";
         
 // setUserId(getUserId());
 setIsLoading(true);
@@ -104,8 +104,9 @@ setIsLoading(true);
 
 axios.get(`${baseurl}${userId}`, {
     headers: {
-        'Access-Control-Allow-Origin': '*',
       'Content-Type': 'application/json',
+    //    'Access-Control-Allow-Origin': '*',
+    //    'Access-Control-Allow-Methods': 'GET',
         'User-Agent': 'android',
         'AppVersion': '1.18.2',
         'Authorization': `Token ${import.meta.env.VITE_API_TOKEN}`,

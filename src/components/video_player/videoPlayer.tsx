@@ -177,6 +177,17 @@ handleAddVideo(url);
  
   }
 
+  const clickVideo = () => {
+ setTimeout(() => {
+ const element: any = document.querySelector('.videoPlayer');
+        if (element) {
+            element.click();
+        } else {
+            console.error('Элемент не найден');
+        }
+   }, 1000)
+  }
+
 
     if (loc != undefined) {
  let video_id = loc.search.split("=")[1];
@@ -194,6 +205,10 @@ handleAddVideo(url);
  setVideoItem(video_item);
   console.log('Saved video item from user: ', videoItem);
    setVideo(video_item[0].video_url);
+
+   clickVideo();
+  
+  
 
     }
    
@@ -229,7 +244,7 @@ handleAddVideo(url);
       <div className="">
         <div
         onClick={showPlayNavigation}
-        className="w-[100vw] h-[100vh]">
+        className="w-[100vw] h-[100vh] videoPlayer">
           <Player />
         </div>
 
